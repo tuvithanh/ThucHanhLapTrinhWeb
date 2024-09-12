@@ -1,14 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Learning\\ThucHanhLapTrinhWeb\\Lab1\\",
+  "WorkspaceRootPath": "D:\\Learning\\html\\Lab1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C48D348D-4899-4AEF-AACA-0F06FA31CD34}|Lab1.csproj|d:\\learning\\thuchanhlaptrinhweb\\lab1\\views\\home\\bai2table1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C48D348D-4899-4AEF-AACA-0F06FA31CD34}|Lab1.csproj|solutionrelative:views\\home\\bai2table1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2CD46069-A04E-4273-A731-0A0949524DCF}|Lab1.csproj|d:\\learning\\html\\lab1\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2CD46069-A04E-4273-A731-0A0949524DCF}|Lab1.csproj|solutionrelative:views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C48D348D-4899-4AEF-AACA-0F06FA31CD34}|Lab1.csproj|d:\\learning\\thuchanhlaptrinhweb\\lab1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C48D348D-4899-4AEF-AACA-0F06FA31CD34}|Lab1.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2CD46069-A04E-4273-A731-0A0949524DCF}|Lab1.csproj|D:\\Learning\\html\\Lab1\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CD46069-A04E-4273-A731-0A0949524DCF}|Lab1.csproj|solutionrelative:app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CD46069-A04E-4273-A731-0A0949524DCF}|Lab1.csproj|D:\\Learning\\html\\Lab1\\views\\home\\product.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2CD46069-A04E-4273-A731-0A0949524DCF}|Lab1.csproj|solutionrelative:views\\home\\product.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CD46069-A04E-4273-A731-0A0949524DCF}|Lab1.csproj|D:\\Learning\\html\\Lab1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CD46069-A04E-4273-A731-0A0949524DCF}|Lab1.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CD46069-A04E-4273-A731-0A0949524DCF}|Lab1.csproj|D:\\Learning\\html\\Lab1\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2CD46069-A04E-4273-A731-0A0949524DCF}|Lab1.csproj|solutionrelative:views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +30,68 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "bai2table1.cshtml",
-              "DocumentMoniker": "D:\\Learning\\ThucHanhLapTrinhWeb\\Lab1\\Views\\Home\\bai2table1.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\bai2table1.cshtml",
-              "ToolTip": "D:\\Learning\\ThucHanhLapTrinhWeb\\Lab1\\Views\\Home\\bai2table1.cshtml",
-              "RelativeToolTip": "Views\\Home\\bai2table1.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Product.cshtml",
+              "DocumentMoniker": "D:\\Learning\\html\\Lab1\\Views\\Home\\Product.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Product.cshtml",
+              "ToolTip": "D:\\Learning\\html\\Lab1\\Views\\Home\\Product.cshtml",
+              "RelativeToolTip": "Views\\Home\\Product.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-11T09:11:57.347Z",
+              "WhenOpened": "2024-09-12T15:38:38.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "contact.cshtml",
+              "DocumentMoniker": "D:\\Learning\\html\\Lab1\\Views\\Home\\contact.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\contact.cshtml",
+              "ToolTip": "D:\\Learning\\html\\Lab1\\Views\\Home\\contact.cshtml",
+              "RelativeToolTip": "Views\\Home\\contact.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T14:52:31.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "home.cshtml",
+              "DocumentMoniker": "D:\\Learning\\html\\Lab1\\Views\\Home\\home.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\home.cshtml",
+              "ToolTip": "D:\\Learning\\html\\Lab1\\Views\\Home\\home.cshtml",
+              "RelativeToolTip": "Views\\Home\\home.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T14:51:41.851Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\Learning\\ThucHanhLapTrinhWeb\\Lab1\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "D:\\Learning\\html\\Lab1\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "D:\\Learning\\ThucHanhLapTrinhWeb\\Lab1\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Learning\\html\\Lab1\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAkwCUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T09:10:33.85Z"
+              "WhenOpened": "2024-09-12T14:02:35.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "D:\\Learning\\html\\Lab1\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "App_Start\\RouteConfig.cs",
+              "ToolTip": "D:\\Learning\\html\\Lab1\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "App_Start\\RouteConfig.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T15:15:02.369Z"
             }
           ]
         }

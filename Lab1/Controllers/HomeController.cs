@@ -1,32 +1,79 @@
-using Lab1.Models;
-using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
 
 namespace Lab1.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        public ActionResult Lab01abaitap1()
         {
-            _logger = logger;
+
+
+            return View();
+        }
+        public ActionResult Lab01abaitap2()
+        {
+
+
+            return View();
+        }
+        public ActionResult Lab01abaitap3()
+        {
+
+
+            return View();
+        }
+        public ActionResult home()
+        {
+
+
+            return View();
         }
 
-        public IActionResult bai2table1()
+        public ActionResult contact()
+        {
+
+
+            return View();
+        }
+        public ActionResult product()
+        {
+
+
+            return View();
+        }
+        public ActionResult Lab01bbaitap2table1()
         {
             return View();
         }
 
-        //public IActionResult Privacy()
+        public ActionResult Lab01bbaitap2table2()
+        {
+            
+
+            return View();
+        }
+        public ActionResult Lab01bbaitap2table3()
+        {
+
+
+            return View();
+        }
+        public ActionResult Lab01bbaitap3()
+        {
+
+
+            return View();
+        }
+
+        //public ActionResult Contact()
         //{
+        //    ViewBag.Message = "Your contact page.";
+
         //    return View();
         //}
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }
