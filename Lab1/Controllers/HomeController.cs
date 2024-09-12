@@ -45,6 +45,19 @@ namespace Lab1.Controllers
 
             return View();
         }
+        public ActionResult Intro()
+        {
+
+
+            return View();
+        }
+        public ActionResult New()
+        {
+
+
+            return View();
+        }
+
         public ActionResult Lab01bbaitap2table1()
         {
             return View();
