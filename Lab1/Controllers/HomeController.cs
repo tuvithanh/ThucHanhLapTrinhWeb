@@ -81,7 +81,18 @@ namespace Lab1.Controllers
 
             return View();
         }
+        public ActionResult Lab01bbaitap4()
+        {
 
+
+            return View();
+        }
+        public ActionResult Lab01bbaitap5()
+        {
+
+
+            return View();
+        }
         //public ActionResult Contact()
         //{
         //    ViewBag.Message = "Your contact page.";
