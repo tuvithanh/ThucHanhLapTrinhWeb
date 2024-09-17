@@ -7,6 +7,15 @@
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <style>
+        /*HTML*/
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+
+                
+        }
+
+
+        }
         /*HEADER*/
         header {
         }
@@ -15,17 +24,17 @@
             display: inline;
         }
 
-            ul#Menu li a {
-                margin-left: 20px;
-                color: white;
-                text-decoration: none;
-                font-weight: bold;
-            }
+        ul#Menu li a {
+            margin-left: 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
         nav ul#Menu {
             list-style-type: none;
             background-color: black;
-            padding: 20px
+            padding: 20px;
         }
 
         ul#Menu {
@@ -40,15 +49,15 @@
     <div id="container">
         <header id="container">
             <div class="logoweb">
-                <img style="width: 100px" src="data:image/png;base64,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" />
+                <img style="width: 100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/2560px-Logo_NIKE.svg.png" />
             </div>
             <nav>
                 <ul id="Menu">
                     <li><a href="~/Home/TrangChu">HOME</a></li>
-                    <li><a href="~/Collections/Collections">COLLECTIONS</a></li>
-                    <li><a href="~/Shop/Shop">SHOP</a></li>
-                    <li><a href="~/LookBook/LookBook">LOOKBOOK</a></li>
-                    <li><a href="~/Blog/Blog">BLOG</a></li>
+                    <li><a href="~/Collections/Collections">COLLECTIONS <i class="fa fa-caret-right fa-rotate-90" aria-hidden="true"></i></a></li>
+                    <li><a href="~/Shop/Shop">SHOP <i class="fa fa-caret-right fa-rotate-90" aria-hidden="true"></i></a></li>
+                    <li><a href="~/LookBook/LookBook">LOOKBOOK <i class="fa fa-caret-right fa-rotate-90" aria-hidden="true"></i></a></li>
+                    <li><a href="~/Blog/Blog">BLOG <i class="fa fa-caret-right fa-rotate-90" aria-hidden="true"></i></a></li>
                     <li><a href="~/FAQS/FAQS">FAQS</a></li>
                     <li><a href="~/AboutUs/AboutUs">ABOUT US</a></li>
                     <li><a href="~/ContactUs/ContactUs">CONTACT US</a></li>
