@@ -32,9 +32,22 @@
               "RelativeDocumentMoniker": "Views\\Home\\TrangChu.cshtml",
               "ToolTip": "D:\\Learning\\ThucHanhLapTrinhWeb\\23DH113217_Mau5\\Views\\Home\\TrangChu.cshtml",
               "RelativeToolTip": "Views\\Home\\TrangChu.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABgAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAwwHIAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-17T15:47:41.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_MasterLayout1.cshtml",
+              "DocumentMoniker": "D:\\Learning\\ThucHanhLapTrinhWeb\\23DH113217_Mau5\\Views\\Shared\\_MasterLayout1.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_MasterLayout1.cshtml",
+              "ToolTip": "D:\\Learning\\ThucHanhLapTrinhWeb\\23DH113217_Mau5\\Views\\Shared\\_MasterLayout1.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_MasterLayout1.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-17T10:17:54.029Z",
               "EditorCaption": ""
             },
             {
@@ -48,18 +61,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-17T10:16:43.966Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_MasterLayout1.cshtml",
-              "DocumentMoniker": "D:\\Learning\\ThucHanhLapTrinhWeb\\23DH113217_Mau5\\Views\\Shared\\_MasterLayout1.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_MasterLayout1.cshtml",
-              "ToolTip": "D:\\Learning\\ThucHanhLapTrinhWeb\\23DH113217_Mau5\\Views\\Shared\\_MasterLayout1.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_MasterLayout1.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-17T10:17:54.029Z"
             }
           ]
         }
