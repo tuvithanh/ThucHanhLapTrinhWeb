@@ -1,0 +1,35 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout1.cshtml";
+    <title>Tinh tien</title>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+}
+<script language="javascript">
+    function CalculateTotal() {
+        var dg = parseFloat(document.getElementById("iPrice").value);
+        var sl = parseFloat(document.getElementById("iQuantity").value);
+        document.getElementById("errPrice").innerHTML = "";
+        document.getElementById("errQuantity").innerHTML = "";
+        if (dg < 0) {
+            document.getElementById("errPrice").innerHTML = "Don gia phai lon hon 0.";
+        }
+        if (sl < 0 || sl > 10) {
+            document.getElementById("errQuantity").innerHTML = "So luong phai trong khoan tu 1 den 10.";
+        }
+        
+        document.getElementById("txtTotal").value = dg * sl;
+        
+    }
+</script>
+<body>
+    <h1>NHAP SO LUONG VA DON GIA</h1>
+    <form name="ShoppingCart" method="post">
+        DON GIA: <input type="number" id="iPrice" name="Price" onchange="CalculateTotal()"/>
+        <span id="errPrice" style="color: red"></span>
+        <br />
+        SO LUONG: <input type="number" id="iQuantity" name="Quantity" min="1" max="10"/>
+        <span id="errQuantity" style="color: red" ></span>
+        <br />
+        Thanh tien: <input type="text" id="txtTotal" name="Total" readonly />
+        
+    </form>
+</body>

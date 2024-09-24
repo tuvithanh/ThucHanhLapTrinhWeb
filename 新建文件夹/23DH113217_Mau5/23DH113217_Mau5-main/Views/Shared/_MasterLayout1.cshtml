@@ -1,0 +1,75 @@
+﻿﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <style>
+        /*HTML*/
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+
+                
+        }
+
+
+        
+        /*HEADER*/
+        header {
+        }
+
+        ul#Menu li {
+            display: inline;
+        }
+
+        ul#Menu li a {
+            margin-left: 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul#Menu {
+            list-style-type: none;
+            background-color: black;
+            padding: 20px;
+        }
+
+        ul#Menu {
+        }
+        /*BANNER*/
+
+
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <header id="container">
+            <div class="logoweb">
+                <img style="width: 100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/2560px-Logo_NIKE.svg.png" />
+            </div>
+            <nav>
+                <ul id="Menu">
+                    <li><a href="~/Home/TrangChu">HOME</a></li>
+                    <li><a href="~/Collections/Collections">COLLECTIONS <i class="fa fa-caret-right fa-rotate-90" aria-hidden="true"></i></a></li>
+                    <li><a href="~/Shop/Shop">SHOP <i class="fa fa-caret-right fa-rotate-90" aria-hidden="true"></i></a></li>
+                    <li><a href="~/LookBook/LookBook">LOOKBOOK <i class="fa fa-caret-right fa-rotate-90" aria-hidden="true"></i></a></li>
+                    <li><a href="~/Blog/Blog">BLOG <i class="fa fa-caret-right fa-rotate-90" aria-hidden="true"></i></a></li>
+                    <li><a href="~/FAQS/FAQS">FAQS</a></li>
+                    <li><a href="~/AboutUs/AboutUs">ABOUT US</a></li>
+                    <li><a href="~/ContactUs/ContactUs">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="banner">
+            <div id="banner"></div>
+            <div>
+                @RenderBody()
+            </div>
+        </section>
+    </div>
+</body>
+</html>

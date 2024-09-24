@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout1.cshtml";
+}
+
+
+<title>
+    Welcome page: su dung form cho phep nguoi dung nhap ten, va hien thi loi chao
+
+
+</title>
+<script src="~/Scripts/JS/Js.js"></script>
+
+<body>
+    <form name="Welcome">
+        <input type="text" id="iName" name="Name" value="Thuy thu mat trang" maxlength="50" max="30" />
+        <br />
+        <input type="button" id="btn" value="Welcome" onclick="DisplayWelcome(iName.value); Homnay();" />
+
+    </form>
+    <script language="javascript">
+        function DisplayWelcome(msg) {
+            alert("Hello " + msg);
+        }
+
+
+    </script>
+
+</body>

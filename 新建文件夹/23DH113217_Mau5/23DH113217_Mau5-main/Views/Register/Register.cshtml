@@ -1,0 +1,87 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout1.cshtml";
+}
+
+<title>Register</title>
+<style>
+    #register-form{
+        align-items:center;
+        justify-content:center;
+        display:flex;
+        
+
+    }
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script language="javascript">
+    function showError(key, mess) {
+        document.getElementById(key + '_error').innerHTML = mess;
+    }
+    function getValue(id) {
+        return document.getElementById(id).value.trim();
+    }
+
+    function validate() {
+        var flag = true;
+
+        var username = getValue("username");
+
+        if (username == "" || username < 5 || !/^[a-zA-Z0-9]+$/.test(username)) {
+            flag = false;
+            showError('username', 'Vui lòng kiểm tra lại Username');
+
+
+        }
+        var password = getValue('password');
+        var repassword = getValue('repassword');
+        if (password == '' || password.length < 8) {
+            flag = false;
+            showError('password', 'Vui lòng kiểm tra lại Password');
+        }
+        var repassword = getValue('repassword');
+        if (password != repassword) {
+            flag = false;
+            showError('repassword', 'Vui lòng kiểm tra nhập lại Password');
+        }
+        return flag;
+    }
+
+        
+</script>
+<body>
+    <form id="register-form">
+    <table border="1" cellpadding="5" cellspacing="5">
+        <tr>
+            <th colspan="2" align="center">Đăng ký</th>
+        </tr>
+        <tr>
+            <td>Tên đăng nhập</td>
+            <td>
+                <input type="text" id="username" name="username" value="" maxlength="50" max="30"/>
+                <span id="username_err"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Mật khẩu</td>
+            <td><input type="text" id="password" name="password" value="" maxlength="50" max="30" />
+            <span id="password_err"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Nhập lại mật khẩu</td>
+            <td><input type="text" id="repassword" name="repassword" value="" maxlength="50" max="30"</td>
+            <span id="repassword_err"></span>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+            <td><input type="submit" id="btn_register" name="btn_register" value="Đăng ký" onclick="return validate()"/> </td>
+            <span id="Submit_err"></span>
+        </tr>
+
+    </table>
+</form>
+
+
+</body>
