@@ -2,4 +2,81 @@
     Layout = "~/Views/Shared/_MasterLayout1.cshtml";
 }
 
+<style>
+    section#contact{
+        height: 1000px;
+        background-image: url(https://marketplace.canva.com/EAE_zqQhT9s/1/0/900w/canva-blue-gradient-phone-wallpaper-Ba3gAikj4nM.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #content {
+        margin: auto;
+        width: 50%;
+        border: 10px solid #00FFFF;
+        padding: 50px;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        color: white;
+        text-align: center;
+        background-color: #3457D5;
+    }
+   
+    #content h2{
+        font-size: 46px;
+        font-weight: bold;
+        
+        
+    }
+    form#contact_form table {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
 
+    .type {
+        width: 350px;
+        margin-bottom: 30px;
+        background-color: #3457D5;
+        padding: 8px;
+    }
+    .btn {
+        border-color: white;
+        background-color: #3457D5;
+        padding: 10px 30px;
+        border-width: 5px;
+        border-block-style: solid;
+        color: white;
+        font-weight: bold;
+        border-width: 3px;
+    }
+
+    
+</style>
+<body>
+
+<section id="contact">
+    <div id="content">
+        <form id="contact_form">
+            <h2>CONTACT US</h2>
+            <p>Nếu có thắc mắc về sản phảm hãy gửi qua form này</p>
+            
+            <input type="text" id="user-contat-name" class="type" name="user-contact-name" value="Your Name" maxlength="50" max="30";"/>
+            <br/>
+
+            <input type="text" id="user-contat-mail" class="type" name="user-contact-mail" value="Your Mail" maxlength="50" max="30" />
+            <br />
+
+            <input type="text" id="user-contat-message" class="type" name="user-contact-message" value="Your message" />
+            <br />
+
+            <input type="button" id="user-contat-btn" class="btn" name="user-contact-btn" value="SUBMIT" />
+
+        </form>
+    </div>
+</section>
+
+</body>
