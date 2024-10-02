@@ -1,0 +1,182 @@
+﻿@{
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<style>
+    ul.items-list li {
+        display: inline;
+        color: gray;
+        margin-left: 10px;
+        font-size: 15px;
+    }
+
+    nav.items-list-nav {
+    }
+    /*content*/
+    section#content{
+        
+    }
+    /*free-ship*/
+    .free-ship {
+        background-color: white;
+        width: 60%;
+        display: inline-block;
+    }
+
+    .free-ship p {
+        text-align: right;
+        color: green;
+        font-weight: bold;
+    }
+
+    .select-items {
+        margin-top: 50px;
+        background-color: white;
+        width: 60%;
+        display: flex;
+    }
+
+    .table-items-text {
+        width: 99%;
+    }
+
+    .select-items td {
+    }
+
+    .select-items.items-text {
+    }
+
+    /*voucher*/
+
+    #voucher {
+        background-color: white;
+        display: inline-block;
+        width: 35%;   
+    }
+    #voucher p
+    {
+       
+       
+    }
+    #text{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        
+    }
+    #text table{
+        width: 100%;
+    }
+    #co-the-chon-2{
+        text-align: right;  
+        color: gray;
+    }
+    #voucher-content{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        margin-top: 20px;
+    }
+    #voucher-pic {
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        border: grey 2px solid;
+        border-radius: 8px;
+        border-right-style: dashed;
+    }
+    #voucher-pic img {
+        width: 50px;
+
+    }
+    #voucher-submit {
+        display: inline-block;
+        padding: 3px;
+        width: 70%;
+        vertical-align: top;
+        border: grey 2px solid;
+        border-radius: 8px;
+        border-left-style: dashed;
+        
+    }
+    #voucher-submit p{
+        display: inline-block;
+        
+    }
+    #voucher-submit-btn {
+        display: inline-block;
+        float: right;
+        margin-top: 20px;
+        background-color: #7CB9E8;
+        padding: 5px 8px;
+        color: white;
+        border-radius: 6px;
+        border: none;
+    }
+    #another-voucher{
+        margin-left: 8%;
+    }
+    #another-voucher p a{
+        text-decoration: none;
+    }
+</style>
+<body>
+    <section id="content">
+    <p>Giỏ Hàng</p>
+    <div>
+        <div class="free-ship">
+            <p>Free Ship 30K</p>
+            <table>
+                <tr>
+                    <td style="width:50%;"><hr style="border: 5px solid green; border-radius: 4px;" /></td>
+                    <td style="vertical-align:middle; text-align: center"><i class="fas fa-check" style="background-color:green;border-radius: 7px;"></i></td>
+                    <td style="width:50%"><hr style="border: 5px solid green; border-radius: 4px;" /></td>
+                    <td style="vertical-align:middle; text-align: center"><i class="fas fa-check" style="background-color:green;border-radius: 7px;"></i></td>
+                </tr>
+                <tr>
+                    <td style="color: green;">Mua</td>
+                    <td style="color: green;">149K</td>
+                    <td></td>
+                    <td style="color: green;">299K</td>
+                </tr>
+            </table>
+
+        </div>
+        <div id="voucher">
+            <div id="text">
+                <table>
+                    <tr>
+                        <td id="tiki-khuyen-mai">Tiki khuyến mãi</td>
+                        <td id="co-the-chon-2">Có thể chọn 2 <i class="fas fa-info-circle"></i></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="voucher-content">
+                <div id="voucher-pic">
+                    <img src="https://cdn.tgdd.vn/2020/04/GameApp/image-180x180.png"/>
+                </div>
+                <div id="voucher-submit">
+                    <p>Giảm 50K</p>
+                    <input type="button" id="voucher-submit-btn" value="Áp dụng"/>
+                </div>
+            </div>
+            <div id="another-voucher">
+                <p><a href="#"><i class="fas fa-ticket-alt"></i> Chọn hoặc nhập Khuyến mãi khác</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="select-items">
+        <input type="checkbox" />
+        <table class="table-items-text">
+            <tr class="items-text">
+                <td>Tất cả</td>
+                <td>Đơn giá</td>
+                <td>Số lượng</td>
+                <td>Thành tiền</td>
+                <td style="text-align: right;"><a href="#"><i class="fas fa-trash-alt"></i></a></td>
+            </tr>
+        </table>
+    </div>
+    </section>
+</body>

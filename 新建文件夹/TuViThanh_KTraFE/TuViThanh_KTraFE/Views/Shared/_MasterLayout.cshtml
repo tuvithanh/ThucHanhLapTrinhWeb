@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta lang="vi" charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <style>
+        
+        /*header*/
+        html {
+            background-color: #FFFAF0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+        section.head-contend{
+            background-color: white;
+        }
+        /*logo*/
+        #logoweb{
+            display:inline-block;
+            
+        }
+        #logoweb img{
+            width: 70px;
+        }
+        /*first-line*/
+        .first-line{
+            display: inline-block;
+        }
+        #search {
+            width: 40%;
+            display: inline-block;
+            align-items: center;
+            justify-items: center;
+            vertical-align: top;
+            
+        }
+        .search-element {
+            
+            height: 30px;
+        }
+        #search-bar{
+            width:70%;
+            
+        }
+        #search-btn {
+            width: 20%;
+            margin-left: 2px;
+            
+        }
+        #right-navbar {
+            
+            float: right;
+            vertical-align: top;
+        }
+        #right-navbar ul{
+            
+        }
+        #right-navbar ul li{
+            display: inline;
+            padding: 10px;
+        }
+        #right-navbar ul li a {
+            text-decoration: none;
+        }
+        /*second-line*/
+        #category-list{
+            height: 30px;
+            display: inline-block;
+            
+        }
+        #category-list ul{
+            
+
+        }
+        #category-list ul li{
+            display: inline;
+
+
+        }
+        #category-list ul li a{
+            text-decoration: none;
+            color: gray;
+            padding:3px;
+            font-size: 15px;
+        }
+        #delivery-address{
+            display:inline-block;
+            width: 30%;
+            margin-left: 70px;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <section class="head-contend">
+            
+                <div id="logoweb">
+                    <img src="~/imgs/logotiki.png"/>
+                </div>
+                <div id="search" class="first-line">
+                    <input type="text" id="search-bar" class="search-element" value="Giao hàng nhanh đúng 2H đúng khung giờ"/>
+                    <input type="button" id="search-btn" class="search-element" value="Tìm kiếm" />
+                </div>
+                <div id="right-navbar">
+                    <ul>
+                        <li><a href="#"><i class="fas fa-home"></i> Trang chủ</a></li>
+                        <li><a href="#"><i class="fas fa-crown"></i> Astra</a></li>
+                        <li><a href="#"><i class="far fa-smile"></i> Tài khoản</a></li>
+                        <li>|</li>
+                        <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+                    
+                <div id="category-list">
+                    <ul>
+                        <li><a href="#">khỏe đẹp</a></li>
+                        <li><a href="#">nhà cửa</a></li>
+                        <li><a href="#">sách</a></li>
+                        <li><a href="#">thể thao</a></li>
+                        <li><a href="#">trái cây</a></li>
+                        <li><a href="#">thịt, trứng</a></li>
+                        <li><a href="#">rau củ quả</a></li>
+                        <li><a href="#">sữa, bơ, phô mai</a></li>
+                        <li><a href="#">hải sản</a></li>
+                        <li><a href="#">gạo, mì ăn liền</a></li>
+                    </ul>
+                </div>
+                <div id="delivery-address">
+                    <p><i class="fas fa-map-marker-alt"></i> Giao đến: </p>
+                </div>
+
+        </section>
+        
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
