@@ -3,6 +3,12 @@
 }
 
 <style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    
     ul.items-list li {
         display: inline;
         color: gray;
@@ -18,8 +24,9 @@
     }
     /*free-ship*/
     .free-ship {
+        margin-left: 20px;
         background-color: white;
-        width: 60%;
+        width: 70%;
         display: inline-block;
     }
 
@@ -29,15 +36,20 @@
         font-weight: bold;
     }
 
-    .select-items {
-        margin-top: 50px;
+    .select-items {  
         background-color: white;
-        width: 60%;
-        display: flex;
+        width: 70%;
+        display: inline-block;
+        padding:10px;
+        margin-left: 20px;
+        
     }
-
+    .select-items input{
+        
+    }
     .table-items-text {
-        width: 99%;
+        width: 100%
+        
     }
 
     .select-items td {
@@ -49,9 +61,12 @@
     /*voucher*/
 
     #voucher {
+        
         background-color: white;
         display: inline-block;
-        width: 35%;   
+        width:25%;
+        padding: 10px;
+        
     }
     #voucher p
     {
@@ -66,6 +81,7 @@
     }
     #text table{
         width: 100%;
+        
     }
     #co-the-chon-2{
         text-align: right;  
@@ -75,7 +91,7 @@
         display: flex;
         justify-content: center;
         align-items:center;
-        margin-top: 20px;
+        
     }
     #voucher-pic {
         padding: 10px;
@@ -120,63 +136,244 @@
     #another-voucher p a{
         text-decoration: none;
     }
+    /*items*/
+    .items{
+        margin-top: 30px;
+        background-color: white;
+        width: 70%;
+        margin-left: 20px;
+        padding: 10px;
+        display: inline-block;
+    } 
+    
+    
+    #store-checkbox{
+        display: inline-block;
+    }
+    #store-name{
+        
+        display: inline-block;
+    }
+    #store-name p a{
+        text-decoration: none;
+    }
+    #store-items{
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+    }
+    #store-items input{
+        
+        
+    }
+    #store-items table {
+        width: 100%;
+        
+    }
+    #store-items table tr {
+        
+    }
+    #store-items table tr td input#quantity-text{
+        width: 20px;
+    }
+    #store-items table tr td input#plus-quantity-btn{
+        width: 20px;
+    }
+    #store-items table tr td input#minus-quantity-btn {
+        width: 20px;
+    }
+    #store-items table tr td img
+    {
+        width: 60px;
+    }
+    #khuyenmai-btn{
+        font-size: 17px;
+    }
+    #shop-khuyen-mai input{
+        background-color: transparent;
+        border: none;
+    }
+    /*calculate-total*/
+    #inline{
+        width: 29%;
+        background-color: white;
+        display: inline-block;
+        
+  
+    }
+    #calculate-total {
+        display: inline-block;
+        background-color: white;
+        width: 25%;
+        margin-top: 30px;
+        padding: 10px;
+    }
+    #calculate-total-text table{
+        width: 100%;
+        
+    }
+    #calculate-total-final{
+        
+    }
+    #calculate-total-final table {
+        width: 100%;
+        
+    }
+    #free-ship-text {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        
+    }
+    #free-ship-text img{
+        width: 130px;
+
+    }
+    /*mua-hang-btn*/
+    #mua-hang-btn {
+        display: inline-block;
+        width: 24%;
+        float: right;
+        margin-right:4%;
+        height: 50px;
+        margin-top: 40px;
+    }
+    #mua-hang-btn input {
+        background-color: red;
+        width: 100%;
+        height: 100%;
+        border:none;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+    }
 </style>
 <body>
     <section id="content">
-    <p>Giỏ Hàng</p>
-    <div>
-        <div class="free-ship">
-            <p>Free Ship 30K</p>
-            <table>
-                <tr>
-                    <td style="width:50%;"><hr style="border: 5px solid green; border-radius: 4px;" /></td>
-                    <td style="vertical-align:middle; text-align: center"><i class="fas fa-check" style="background-color:green;border-radius: 7px;"></i></td>
-                    <td style="width:50%"><hr style="border: 5px solid green; border-radius: 4px;" /></td>
-                    <td style="vertical-align:middle; text-align: center"><i class="fas fa-check" style="background-color:green;border-radius: 7px;"></i></td>
-                </tr>
-                <tr>
-                    <td style="color: green;">Mua</td>
-                    <td style="color: green;">149K</td>
-                    <td></td>
-                    <td style="color: green;">299K</td>
-                </tr>
-            </table>
-
-        </div>
-        <div id="voucher">
-            <div id="text">
+        <p style="margin-top:20px;">Giỏ Hàng</p>
+        <div>
+            <div class="free-ship">
+                <p>Free Ship 30K</p>
                 <table>
                     <tr>
-                        <td id="tiki-khuyen-mai">Tiki khuyến mãi</td>
-                        <td id="co-the-chon-2">Có thể chọn 2 <i class="fas fa-info-circle"></i></td>
+                        <td style="width:50%;"><hr style="border: 5px solid green; border-radius: 4px;" /></td>
+                        <td style="vertical-align:middle; text-align: center"><i class="fas fa-check" style="background-color:green;border-radius: 7px;"></i></td>
+                        <td style="width:50%"><hr style="border: 5px solid green; border-radius: 4px;" /></td>
+                        <td style="vertical-align:middle; text-align: center"><i class="fas fa-check" style="background-color:green;border-radius: 7px;"></i></td>
+                    </tr>
+                    <tr>
+                        <td style="color: green;">Mua</td>
+                        <td style="color: green;">149K</td>
+                        <td></td>
+                        <td style="color: green;">299K</td>
+                    </tr>
+                </table>
+                <div id="inline">
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+            <div id="voucher">
+                <div id="text">
+                    <table>
+                        <tr>
+                            <td id="tiki-khuyen-mai">Tiki khuyến mãi</td>
+                            <td id="co-the-chon-2">Có thể chọn 2 <i class="fas fa-info-circle"></i></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="voucher-content">
+                    <div id="voucher-pic">
+                        <img src="~/imgs/logozalopay.png" />
+                    </div>
+                    <div id="voucher-submit">
+                        <p>Giảm 50K</p>
+                        <input type="button" id="voucher-submit-btn" value="Áp dụng" />
+                    </div>
+                </div>
+                <div id="another-voucher">
+                    <p><a href="#"><i class="fas fa-ticket-alt"></i> Chọn hoặc nhập Khuyến mãi khác</a></p>
+                </div>
+            </div>
+
+        </div>
+        <div class="select-items">
+            <input type="checkbox" />
+            <table class="table-items-text">
+                <tr class="items-text">
+                    <td width="45%">Tất cả</td>
+                    <td>Đơn giá</td>
+                    <td>Số lượng</td>
+                    <td>Thành tiền</td>
+                    <td style="text-align: right;"><a href="#"><i class="fas fa-trash-alt"></i></a></td>
+                </tr>
+            </table>
+            <div id="inline">
+                <p>&nbsp;</p>
+            </div>
+        </div>
+
+        <div id="calculate-total">
+            <div id="calculate-total-text">
+                <table>
+                    <tr>
+                        <td style="color: gray">Tạm tính</td>
+                        <td style="text-align: right">8.480.000₫</td>
                     </tr>
                 </table>
             </div>
-            <div id="voucher-content">
-                <div id="voucher-pic">
-                    <img src="https://cdn.tgdd.vn/2020/04/GameApp/image-180x180.png"/>
-                </div>
-                <div id="voucher-submit">
-                    <p>Giảm 50K</p>
-                    <input type="button" id="voucher-submit-btn" value="Áp dụng"/>
-                </div>
+            <hr style="width: 100%; color: gray;" />
+            <div id="calculate-total-final">
+                <table>
+                    <tr>
+                        <td style="color: gray">Tổng tiền</td>
+                        <td style="text-align: right; color: red;font-size: 30px;">8.480.000₫</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="color: gray;text-align: right;">(Đã bao gồm VAT nếu có)</td>
+                    </tr>
+                </table>
             </div>
-            <div id="another-voucher">
-                <p><a href="#"><i class="fas fa-ticket-alt"></i> Chọn hoặc nhập Khuyến mãi khác</a></p>
+            <div id="free-ship-text">
+                <img src="~/imgs/freeship.jpg" />
+                <p>đã được áp dụng</p>
+            </div>
+
+        </div>
+
+        <div class="items">
+            <div id="store-content">
+                <div id="store-checkbox">
+                    <input type="checkbox" />
+                </div>
+                <div id="store-name">
+                    <p><a href="#"><i class="fas fa-store"></i> GIA DỤNG VIỆT <i class="fas fa-chevron-right"></i></a></p>
+                </div>
+                <div id="store-items">
+                    <input type="checkbox" style="" />
+                    <table>
+                        <tr>
+                            <td width="45%" style="text-align:center;"><img src="~/imgs/samsung-galaxy-a54-5g-tim-thumb-1-600x600.jpg" />Điện thoại Samsung Galaxy A54 5G (8GB/128GB) - Hàng chính hãng - Tím</td>
+                            <td style="">8.480.000₫</td>
+                            <td>
+                                <input type="button" id="plus-quantity-btn" value="+" />
+                                <input type="text" id="quantity-text" />
+                                <input type="button" id="minus-quantity-btn" value="-" />
+                            </td>
+                            <td>8.480.000₫</td>
+                            <td style="text-align: right;"><a href="#"><i class="fas fa-trash-alt"></i></a></td>
+                        </tr>
+                    </table>
+                    <hr style="width: 100%;color: grey" />
+                    <div id="shop-khuyen-mai">
+                        <input type="button" id="khuyenmai-btn" value="Shop khuyến mãi" />
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="select-items">
-        <input type="checkbox" />
-        <table class="table-items-text">
-            <tr class="items-text">
-                <td>Tất cả</td>
-                <td>Đơn giá</td>
-                <td>Số lượng</td>
-                <td>Thành tiền</td>
-                <td style="text-align: right;"><a href="#"><i class="fas fa-trash-alt"></i></a></td>
-            </tr>
-        </table>
-    </div>
+        
+        <div id="mua-hang-btn">
+            <input type="button" value="Mua Hàng" />
+        </div>
     </section>
 </body>

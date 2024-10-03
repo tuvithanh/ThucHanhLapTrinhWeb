@@ -147,7 +147,10 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="imgs\freeship.jpg" />
+    <Content Include="imgs\logozalopay.png" />
     <Content Include="imgs\logotiki.png" />
+    <Content Include="imgs\samsung-galaxy-a54-5g-tim-thumb-1-600x600.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
