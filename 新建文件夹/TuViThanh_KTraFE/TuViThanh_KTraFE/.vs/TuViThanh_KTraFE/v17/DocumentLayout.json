@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "D:\\Learning\\ThucHanhLapTrinhWeb\\\u65B0\u5EFA\u6587\u4EF6\u5939\\TuViThanh_KTraFE\\TuViThanh_KTraFE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D08F940E-9CBF-478C-8C9F-E623157429C1}|TuViThanh_KTraFE.csproj|d:\\learning\\thuchanhlaptrinhweb\\\u65B0\u5EFA\u6587\u4EF6\u5939\\tuvithanh_ktrafe\\tuvithanh_ktrafe\\views\\shoppingcart\\shoppingcart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{D08F940E-9CBF-478C-8C9F-E623157429C1}|TuViThanh_KTraFE.csproj|D:\\Learning\\ThucHanhLapTrinhWeb\\\u65B0\u5EFA\u6587\u4EF6\u5939\\TuViThanh_KTraFE\\TuViThanh_KTraFE\\views\\shoppingcart\\shoppingcart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D08F940E-9CBF-478C-8C9F-E623157429C1}|TuViThanh_KTraFE.csproj|solutionrelative:views\\shoppingcart\\shoppingcart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D08F940E-9CBF-478C-8C9F-E623157429C1}|TuViThanh_KTraFE.csproj|D:\\Learning\\ThucHanhLapTrinhWeb\\\u65B0\u5EFA\u6587\u4EF6\u5939\\TuViThanh_KTraFE\\TuViThanh_KTraFE\\views\\shared\\_masterlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{D08F940E-9CBF-478C-8C9F-E623157429C1}|TuViThanh_KTraFE.csproj|d:\\learning\\thuchanhlaptrinhweb\\\u65B0\u5EFA\u6587\u4EF6\u5939\\tuvithanh_ktrafe\\tuvithanh_ktrafe\\views\\shared\\_masterlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D08F940E-9CBF-478C-8C9F-E623157429C1}|TuViThanh_KTraFE.csproj|solutionrelative:views\\shared\\_masterlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -28,7 +28,7 @@
               "RelativeDocumentMoniker": "Views\\ShoppingCart\\ShoppingCart.cshtml",
               "ToolTip": "D:\\Learning\\ThucHanhLapTrinhWeb\\\u65B0\u5EFA\u6587\u4EF6\u5939\\TuViThanh_KTraFE\\TuViThanh_KTraFE\\Views\\ShoppingCart\\ShoppingCart.cshtml",
               "RelativeToolTip": "Views\\ShoppingCart\\ShoppingCart.cshtml",
-              "ViewState": "AgIAAGQBAAAAAAAAAAAAAHEBAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAA4BAAAAAAAAAAAAACEBAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-01T13:05:42.578Z",
               "EditorCaption": ""
@@ -41,7 +41,7 @@
               "RelativeDocumentMoniker": "Views\\Shared\\_MasterLayout.cshtml",
               "ToolTip": "D:\\Learning\\ThucHanhLapTrinhWeb\\\u65B0\u5EFA\u6587\u4EF6\u5939\\TuViThanh_KTraFE\\TuViThanh_KTraFE\\Views\\Shared\\_MasterLayout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_MasterLayout.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAEcAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAB4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-01T12:58:47.968Z",
               "EditorCaption": ""
