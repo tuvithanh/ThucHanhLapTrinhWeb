@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Learning\\ThucHanhLapTrinhWeb\\23DH113217_Mau5\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C3137ED2-F405-4FCA-B3CE-78AFF6DE936D}|23DH113217_Mau5.csproj|d:\\learning\\thuchanhlaptrinhweb\\23dh113217_mau5\\views\\home\\trangchu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C3137ED2-F405-4FCA-B3CE-78AFF6DE936D}|23DH113217_Mau5.csproj|solutionrelative:views\\home\\trangchu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TrangChu.cshtml",
+              "DocumentMoniker": "D:\\Learning\\ThucHanhLapTrinhWeb\\23DH113217_Mau5\\Views\\Home\\TrangChu.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\TrangChu.cshtml",
+              "ToolTip": "D:\\Learning\\ThucHanhLapTrinhWeb\\23DH113217_Mau5\\Views\\Home\\TrangChu.cshtml",
+              "RelativeToolTip": "Views\\Home\\TrangChu.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAEsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-18T09:58:10.929Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -134,6 +134,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\Home\banner.png" />
+    <Content Include="Views\Home\basketball.jpg" />
+    <Content Include="Views\Home\football.jpg" />
+    <Content Include="Views\Home\assets\nike-just-do-it.jpg" />
+    <Content Include="Views\Home\run.jpg" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />

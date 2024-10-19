@@ -81,3 +81,7 @@ D:\Learning\ThucHanhLapTrinhWeb\23DH113217_MyStore\obj\Debug\23DH113217_MyStore.
 D:\Learning\ThucHanhLapTrinhWeb\23DH113217_MyStore\obj\Debug\23DH1132.CDFFF00B.Up2Date
 D:\Learning\ThucHanhLapTrinhWeb\23DH113217_MyStore\obj\Debug\23DH113217_MyStore.dll
 D:\Learning\ThucHanhLapTrinhWeb\23DH113217_MyStore\obj\Debug\23DH113217_MyStore.pdb
+D:\Learning\ThucHanhLapTrinhWeb\23DH113217_MyStore\bin\PagedList.dll
+D:\Learning\ThucHanhLapTrinhWeb\23DH113217_MyStore\bin\PagedList.Mvc.dll
+D:\Learning\ThucHanhLapTrinhWeb\23DH113217_MyStore\bin\PagedList.xml
+D:\Learning\ThucHanhLapTrinhWeb\23DH113217_MyStore\bin\PagedList.Mvc.xml
