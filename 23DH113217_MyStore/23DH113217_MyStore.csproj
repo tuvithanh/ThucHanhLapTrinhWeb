@@ -139,7 +139,14 @@
     <Compile Include="Areas\Admin\Controllers\CategoriesController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductsController.cs" />
+    <Compile Include="Controllers\AboutUsController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\CollectionsController.cs" />
+    <Compile Include="Controllers\ContactUsController.cs" />
+    <Compile Include="Controllers\FAQSController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LookBookController.cs" />
+    <Compile Include="Controllers\ShopController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -179,6 +186,7 @@
     <Compile Include="Models\User.cs">
       <DependentUpon>MyStoreModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModel\HomeProductVM.cs" />
     <Compile Include="Models\ViewModel\ProductSearchVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -263,10 +271,18 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Shared\_MasterLayout1.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\AboutUs\AboutUs.cshtml" />
+    <Content Include="Views\Blog\Blog.cshtml" />
+    <Content Include="Views\Collections\Collections.cshtml" />
+    <Content Include="Views\ContactUs\ContactUs.cshtml" />
+    <Content Include="Views\FAQS\FAQS.cshtml" />
+    <Content Include="Views\LookBook\LookBook.cshtml" />
+    <Content Include="Views\Shop\Shop.cshtml" />
+    <Content Include="Views\Home\_PVFeaturedProduct.cshtml" />
+    <Content Include="Views\Home\_PVNewProduct.cshtml" />
+    <Content Include="Views\Home\ProductDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

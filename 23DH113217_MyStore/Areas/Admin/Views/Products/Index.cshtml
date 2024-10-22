@@ -17,7 +17,7 @@
 <body>
     @using (Html.BeginForm("Index", "Products", FormMethod.Get))
     {
-        <div class="form-group search-container">
+        <div class="form-group search-container" style="display: flex;">
             @Html.TextBoxFor(m => m.SearchTerm, new
             {
                 @class = "form-control",
@@ -73,13 +73,6 @@
                     minPrice = Model.MinPrice,
                     maxPrice = Model.MaxPrice
                 }, null) |
-
-
-
-
-
-
-
 
         </div>
 

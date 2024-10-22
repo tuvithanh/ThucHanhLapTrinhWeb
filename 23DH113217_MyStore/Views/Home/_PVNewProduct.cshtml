@@ -1,0 +1,77 @@
+﻿@model _23DH113217_MyStore.Models.ViewModel.HomeProductVM
+@using PagedList.Mvc;
+
+<style>
+    .ListProduct{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lproduct-item {
+        display: inline-block;
+        border: solid black 2px;
+        border-radius: 5px;
+        width: 200px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .feature-container {
+    }
+
+    .lproduct-item p {
+        font-size: 12px;
+    }
+
+    .lproduct-item img {
+        width: 150px;
+    }
+
+    .prodPrice {
+        font-weight: bold;
+    }
+</style>
+<table style="margin: 40px 0; margin-left: auto; margin-right: auto;" id="collection-content-line" cellspacing="10">
+    <tr>
+        <td style="width:45%"><hr /></td>
+        <td style="vertical-align:middle; text-align: center; font-size:20px"><b>Sản phẩm mới</b></td>
+        <td style="width:45%"><hr /></td>
+    </tr>
+</table>
+@if (Model.NewProducts != null && Model.NewProducts.Any())
+{
+<section class="container-fluid ListProduct">
+    
+    <ul class="list-container">
+        @foreach (var product in Model.NewProducts)
+        {
+        <li class="lproduct-item">
+            <div>
+                <a href="@Url.Action("ProductDetail", "Home", new { id = product.ProductID })">
+                    <img src="@Html.DisplayFor(modelItem => product.ProductImage)" />
+                </a>
+            </div>
+            <div>
+                <p class="prodPrice">@Html.DisplayFor(modelItem => product.ProductPrice)</p>
+                <p class="prodName">@Html.DisplayFor(modelItem => product.ProductName) </p>
+                <p class="prodSale">
+                    Đã bán:&nbsp; @Html.DisplayFor(modelItem => product.OrderDetails.Count)
+                </p>
+            </div>
+        </li>
+        }
+    </ul>
+    
+
+</section>
+<div class="pagination-container">
+    @Html.PagedListPager(Model.NewProducts, page => Url.Action("Index", new { page, searchTerm = Model.SearchTerm }))
+</div>
+}
+else
+{
+    <p> Không tin được sản phần nào phù hợp.</p>
+}

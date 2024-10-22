@@ -1,0 +1,87 @@
+﻿@model _23DH113217_MyStore.Models.ViewModel.HomeProductVM
+
+<style>
+    .featureProd {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+        
+      
+    }
+     .product-item{
+        display: inline-block;
+        border: solid black 2px;
+        border-radius: 5px;
+        width: 200px;
+        
+   
+}
+
+    h2{
+        
+        text-align: center;
+    }
+    .feature-container{
+        
+    }
+    .product-item p {
+        font-size: 12px;
+        
+    }
+
+        .product-item img {
+            width: 150px;
+            
+        }
+
+        .prodPrice {
+    font-weight: bold;
+}
+</style>
+<table style="margin: 40px 0; margin-left: auto; margin-right: auto;" id="collection-content-line" cellspacing="10">
+    <tr>
+        <td style="width:45%"><hr /></td>
+        <td style="vertical-align:middle; text-align: center; font-size:20px"><b>Sản phẩm nổi bật</b></td>
+        <td style="width:45%"><hr /></td>
+    </tr>
+</table>
+    @if (Model.FeaturedProducts != null && Model.FeaturedProducts.Any())
+    {
+
+
+    <section class="container-fluid featureProd">
+        
+        <div class="feature-container">
+            @foreach (var product in Model.FeaturedProducts)
+            {
+            <div class="product-item">
+                <div>
+                    <a href="@Url.Action("ProductDetail", "Home", new { id = product.ProductID })">
+                        <img src="@Html.DisplayFor(modelItem => product.ProductImage)" />
+                    </a>
+                </div>
+                <div>
+                    <p class="prodName">
+                        @Html.DisplayFor(modelItem => product.ProductName)
+                    </p>
+                    <p class="prodPrice">
+                        @Html.DisplayFor(modelItem => product.ProductPrice)
+                    </p>
+                    
+                    <p class="prodCate">
+                        @Html.DisplayFor(modelItem => product.Category.CategoryName)
+                    </p>
+                    <p class="prodSale">
+                        Đã bán:&nbsp; @Html.DisplayFor(modelItems => product.OrderDetails.Count)
+                    </p>
+                </div>
+            </div>
+            }
+        </div>
+    </section>
+    
+    }
+
+
+

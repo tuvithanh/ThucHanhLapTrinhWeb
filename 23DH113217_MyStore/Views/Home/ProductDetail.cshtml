@@ -1,0 +1,71 @@
+﻿@model _23DH113217_MyStore.Models.Product
+@{
+    ViewBag.Title = "ProductDetail";
+    Layout = "~/Views/Shared/_MasterLayout1.cshtml";
+}
+
+<style>
+    .dl-horizontal{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    dt{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    img{
+        width: 400px;
+    }
+</style>
+
+
+
+
+<h2>Chi tiết sản phẩm</h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <div class="col-md-4">
+            <img src="@Html.DisplayFor(model => model.ProductImage)" />
+        </div>
+        <div class="col-md-8">
+            <dt>
+                Tên sản phẩm
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ProductName)
+            </dd>
+            <dt>
+                Đơn giá
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ProductPrice)
+            </dd>
+
+
+
+
+
+            <dt>
+                Mô tả
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ProductDescription)
+            </dd>
+
+            <dt>
+                Danh mục
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Category.CategoryName)
+            </dd>
+        </div>
+    </dl>
+</div>

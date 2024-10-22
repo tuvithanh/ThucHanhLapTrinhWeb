@@ -55,7 +55,7 @@ namespace _23DH113217_MyStore.Areas.Admin.Controllers
                     break;
             }
             int pageNumber = page ?? 1;
-            int pageSize = 2;
+            int pageSize = 6;
             model.Products = products.ToPagedList(pageNumber, pageSize);
 
 

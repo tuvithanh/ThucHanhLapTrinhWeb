@@ -1,93 +1,96 @@
 ﻿@{
     Layout = "~/Views/Shared/_MasterLayout1.cshtml";
 }
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-    section#contact {
-        height: 1000px;
-        background-image: url(https://marketplace.canva.com/EAE_zqQhT9s/1/0/900w/canva-blue-gradient-phone-wallpaper-Ba3gAikj4nM.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-    }
-    #content {
-        margin: auto;
-        width: 50%;
-        border: 10px solid #00FFFF;
-        padding: 50px;
-        border-radius: 10px;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        color: white;
-        text-align: center;
-        background-color: #3457D5;
-    }
-   
-    #content h2{
-        font-size: 46px;
-        font-weight: bold;
-        
-        
-    }
-    form#contact_form table {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-    }
 
-    .type {
-        width: 350px;
-        margin-bottom: 30px;
-        padding: 8px;
-        background-color: transparent;
-        border: 0px solid;
-        border-bottom: 2px solid;
-        color: #CCC;
-    }
-    .btn {
-        border-color: white;
-        background-color: #3457D5;
-        padding: 10px 33px;
-        border-width: 5px;
-        border-block-style: solid;
-        color: white;
-        font-weight: bold;
-        border-width: 3px;
-    }
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
 
+        section#contact {
+            height: 1080px;
+            background-image: url(https://cdn.prod.www.spiegel.de/images/03cdedbc-0001-0004-0000-000000406842_w920_r1.778_fpx58.2_fpy49.98.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        #content {
+            margin: auto;
+            width: 50%;
+            border: 10px solid #9fd3c7;
+            padding: 50px;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            color: black;
+            text-align: center;
+            background-color: #ececec;
+        }
+
+            #content h2 {
+                font-size: 46px;
+                font-weight: bold;
+            }
+
+        form#contact_form table {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .type {
+            width: 350px;
+            margin-bottom: 30px;
+            padding: 8px;
+            background-color: transparent;
+            border: 0px solid;
+            border-bottom: 2px solid;
+            color: black;
+        }
+
+        .btn {
+            border-color: white;
+            background-color: #ececec;
+            padding: 10px 33px;
+            border-width: 5px;
+            border-block-style: solid;
+            color: black;
+            font-weight: bold;
+            border-width: 3px;
+            border-radius: 17px;
+        }
+    </style>
     
-</style>
+</head>
 <body>
-<script>
-    function contact_submit() {
-        
-    }
-</script>
-<section id="contact">
-    <div id="content">
-        <form id="contact_form">
-            <h2>CONTACT US</h2>
-            <p>Nếu có thắc mắc về sản phảm hãy gửi qua form này </p>
-            
-            <input type="text" id="user-contact-name" class="type" name="user-contact-name" value="Your Name" maxlength="50" max="30";"/>
-            <br/>
+    <section id="contact">
+        <div id="content">
+            <form action="https://api.web3forms.com/submit" method="POST" id="contact_form">
+                <h2>CONTACT US</h2>
+                <p>Nếu có thắc mắc về sản phảm hãy gửi qua form này </p>
+                <input type="hidden" name="access_key" value="365a09cd-39ed-492f-a237-0802fceba0cb">
+                <input type="text" id="fullName" class="type" name="Full Name" placeholder="Your Name" maxlength="50" max="30" required />
+                <br />
 
-            <input type="text" id="user-contact-mail" class="type" name="user-contact-mail" value="Your Mail" maxlength="50" max="30" />
-            <br />
+                <input type="email" id="email_id" class="type" name="Email" placeholder="Your Email" maxlength="50" max="30" required />
+                <br />
 
-            <input type="text" id="user-contact-message" class="type" name="user-contact-message" value="Your Message" />
-            <br />
+                <textarea id="message" class="type" name="Message" placeholder="Message" required></textarea>
+                <br />
 
-            <input type="button" id="user-contact-btn" class="btn" name="user-contact-btn" value="SUBMIT" onclick="contact_submit()"/>
-        </form>
-    </div>
-</section>
+                <button class="btn" type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
 
 </body>

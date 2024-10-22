@@ -1,33 +1,175 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@model _23DH113217_MyStore.Models.ViewModel.HomeProductVM
+
+
+@{
+    Layout = "~/Views/Shared/_MasterLayout1.cshtml";
 }
 
-<main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
-    </section>
 
-    <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </section>
+<style>
+    /*BANNER*/
+    section#banner {
+        background-image: url(https://images-ext-1.discordapp.net/external/1UMlADt6QgA4YooQmn_5dXUOtw4MsWZlGc_qlhs5fBE/https/file.hstatic.net/1000008082/file/nike_kid_banner_b9197a77637d4bb290e5d8bdea3b0a46.jpg?format=webp&width=1170&height=585);
+        background-size: cover;
+        height: 400px;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    div.banner-content h2 {
+        font-size: 36px;
+        color: red;
+    }
+
+    #first-hr {
+        border: 2px solid blue;
+        width: 5%;
+    }
+
+    div.banner-content p {
+        color: black;
+    }
+
+    .banner-content {
+        text-align: center;
+    }
+
+    .bannner-btn {
+        background-color: black;
+        color: white;
+        padding: 4px 10px;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+    }
+    /*CONTENT*/
+    section#content {
+        align-items: center;
+        justify-content: center;
+    }
+
+    div.shop-by-sport h3 {
+        margin: 50px 44px;
+    }
+
+    .sport-content {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background-size: cover;
+    }
+
+    .sport-content-item {
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 500px;
+        height: 400px;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+        .sport-content-item a {
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+        }
+
+
+
+
+    /*searchbar*/
+    section.container-fluid.searchProd {
+        text-align: center;
+    }
+
+    .search-container {
+    }
+
+    .search-button {
+        background-color: red;
+    }
+</style>
+
+<section id="banner">
+    <div class="banner-content">
+        <h2>NIKE</h2>
+        <hr id="first-hr" />
+        <p>Though the human foot can adapt to varied terrains and climate conditions, it is vulnerable, and shoes provide protection. Form was originally tied to function, but over time, shoes also became fashion items.</p>
+        <a href="#" class="bannner-btn">SHOP THE COLLECTIONS <i class="fa fa-caret-right" aria-hidden="true"></i></a>
     </div>
-</main>
+</section>
+<section class="container-fluid searchProd">
+    <h2>Tìm kiếm sản phẩm</h2>
+    @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+    {
+        <div class="form-group search-container">
+            @Html.TextBoxFor(m => m.SearchTerm, new
+       {
+           @class = "search-input",
+           placeholder = "Nhập tên,, mô tả hoặc chủng loại sả phẩm"
+
+       })
+            <button type="submit" class="search-button">Tìm kiếm</button>
+
+
+        </div>
+    }
+</section>
+
+
+
+@Html.Partial("_PVFeaturedProduct", Model)
+
+@Html.Partial("_PVNewProduct", Model)
+
+@*<section id="content">
+    <div class="sport-content">
+        <div id="running" class="sport-content-item">
+            <a href="#">Running</a>
+        </div>
+        <div id="football" class="sport-content-item">
+            <a href="#">Football</a>
+
+        </div>
+        <div id="basketball" class="sport-content-item">
+            <a href="#">Basketball</a>
+
+        </div>
+    </div>
+
+    <table style="margin: 40px 0; margin-left: auto; margin-right: auto;" id="collection-content-line" cellspacing="10">
+        <tr>
+            <td style="width:47%"><hr /></td>
+            <td style="vertical-align:middle; text-align: center; font-size:20px"><b>Collections</td>
+            <td style="width:47%"><hr /></td>
+        </tr>
+    </table>
+
+
+    <div id="collection-content">
+        <div class="collection-item">
+            <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_0.9/h_523,c_limit/5a1bca32-9546-4320-b951-2e9d6a3c5765/polo-XxjHlK.png" />
+            <h3 class="collection-name">Nike</h3>
+            <p class="collection-desciption">Men's Polo</p>
+            <p class="collection-price">1,479,000₫</p>
+        </div>
+        <div class="collection-item">
+            <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_0.9/h_523,c_limit/8a480dc9-4154-49ff-9446-49d901658372/life-el-chino-trousers-q7MGCv.png" />
+            <h3 class="collection-name">Nike Life</h3>
+            <p class="collection-desciption">Men's EI Chino Trousers</p>
+            <p class="collection-price">2,299,000₫</p>
+        </div>
+        <div class="collection-item">
+            <img src="https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_0.9/h_523,c_limit/1f31a5fd-9f59-4331-8bd1-c8fabe073b4e/zoom-vomero-5-shoes-XL3L3L.png" />
+            <h3 class="collection-name">Nike Zoom Vomero 5</h3>
+            <p class="collection-desciption">Shoes</p>
+            <p class="collection-price">4,699,000₫</p>
+        </div>
+    </div>*@
