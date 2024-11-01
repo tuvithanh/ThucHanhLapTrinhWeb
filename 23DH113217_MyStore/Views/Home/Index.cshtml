@@ -9,7 +9,7 @@
 <style>
     /*BANNER*/
     section#banner {
-        background-image: url(https://images-ext-1.discordapp.net/external/1UMlADt6QgA4YooQmn_5dXUOtw4MsWZlGc_qlhs5fBE/https/file.hstatic.net/1000008082/file/nike_kid_banner_b9197a77637d4bb290e5d8bdea3b0a46.jpg?format=webp&width=1170&height=585);
+        background-image: url(https://krows-digital.com/wp-content/uploads/2024/07/sefesdfse.jpg);
         background-size: cover;
         height: 400px;
         background-position: center;
@@ -17,7 +17,9 @@
         align-items: center;
         justify-content: center;
     }
+    div.banner-content{
 
+    }
     div.banner-content h2 {
         font-size: 36px;
         color: red;
@@ -29,7 +31,7 @@
     }
 
     div.banner-content p {
-        color: black;
+        color: wheat;
     }
 
     .banner-content {
@@ -95,6 +97,198 @@
     .search-button {
         background-color: red;
     }
+    /*sidebar*/
+    body {
+        height: 100vh;
+        width: 100%;
+        background-image: url("images/hero-bg.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 33.3%;
+        left: 0;
+        width: 60px;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background: #7AB2D3;
+        backdrop-filter: blur(17px);
+        --webkit-backdrop-filter: blur(17px);
+        border-right: 1px solid rgba(255, 255, 255, 0.7);
+        transition: width 0.3s ease;
+    }
+
+        .sidebar:hover {
+            width: 260px;
+        }
+
+        .sidebar .logo {
+            color: #000;
+            display: flex;
+            align-items: center;
+            padding: 25px 10px 15px;
+        }
+
+    .logo img {
+        width: 43px;
+        border-radius: 50%;
+    }
+
+    .logo h2 {
+        font-size: 1.15rem;
+        font-weight: 600;
+        margin-left: 15px;
+        display: none;
+    }
+
+    .sidebar:hover .logo h2 {
+        display: block;
+    }
+
+    .sidebar .links {
+        list-style: none;
+        margin-top: 20px;
+        overflow-y: auto;
+        scrollbar-width: none;
+        height: calc(100% - 140px);
+    }
+
+        .sidebar .links::-webkit-scrollbar {
+            display: none;
+        }
+
+    .links li {
+        display: flex;
+        border-radius: 4px;
+        align-items: center;
+    }
+
+        .links li:hover {
+            cursor: pointer;
+            background: #fff;
+        }
+
+    .links h4 {
+        color: #222;
+        font-weight: 500;
+        display: none;
+        margin-bottom: 10px;
+    }
+
+    .sidebar:hover .links h4 {
+        display: block;
+    }
+
+    .links hr {
+        margin: 10px 8px;
+        border: 1px solid #4c4c4c;
+    }
+
+    .sidebar:hover .links hr {
+        border-color: transparent;
+    }
+
+    .links li span {
+        padding: 12px 10px;
+        margin-right: 40px;
+    }
+
+    .links li a {
+        padding: 10px;
+        color: #000;
+        display: none;
+        font-weight: 500;
+        white-space: nowrap;
+        text-decoration: none;
+    }
+
+    .sidebar:hover .links li a {
+        display: block;
+    }
+
+    .links .logout-link {
+        margin-top: 20px;
+    }
+/*sidebar-khuyenmai*/
+    .sidebar-khuyenmai {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 60px;
+        height: 170px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background: #7AB2D3;
+        backdrop-filter: blur(17px);
+        --webkit-backdrop-filter: blur(17px);
+        border-right: 1px solid rgba(255, 255, 255, 0.7);
+        transition: width 0.3s ease;
+        
+        
+    }
+
+        .sidebar-khuyenmai:hover {
+            width: 260px;
+            height: 260px;
+        }
+
+        .sidebar-khuyenmai .logo {
+            color: #000;
+            display: flex;
+            align-items: center;
+            padding: 25px 10px 15px;
+        }
+
+    
+
+    
+
+    .sidebar-khuyenmai:hover .logo h2 {
+        display: block;
+    }
+
+    .sidebar-khuyenmai .links {
+        list-style: none;
+        margin-top: 20px;
+        overflow-y: auto;
+        scrollbar-width: none;
+        height: calc(100% - 140px);
+    }
+
+        .sidebar-khuyenmai .links::-webkit-scrollbar {
+            display: none;
+        }
+
+    
+
+        
+
+    
+
+    .sidebar-khuyenmai:hover .links h4 {
+        display: block;
+    }
+
+    
+
+    .sidebar-khuyenmai:hover .links hr {
+        border-color: transparent;
+    }
+
+    
+
+    
+
+    .sidebar-khuyenmai:hover .links li a {
+        display: block;
+    }
+
+    
 </style>
 
 <section id="banner">
@@ -105,6 +299,41 @@
         <a href="#" class="bannner-btn">SHOP THE COLLECTIONS <i class="fa fa-caret-right" aria-hidden="true"></i></a>
     </div>
 </section>
+<aside class="sidebar">
+    <div class="logo">
+        @*<img src="images/logo.jpg" alt="logo">*@
+        <h2>Danh mục sản phẩm</h2>
+    </div>
+    <ul class="links">
+        <li>
+            <span class="material-symbols-outlined"><i class="fas fa-tshirt"></i></span>
+            <a href="#">Áo</a>
+        </li>
+        <li>
+            <span class="material-symbols-outlined"><i class="fas fa-weight-hanging"></i></span>
+            <a href="#">Quần</a>
+        </li>
+        <li>
+            <span class="material-symbols-outlined"><i class="fas fa-hat-cowboy"></i></span>
+            <a href="#">Mũ</a>
+        </li>
+        
+        
+    </ul>
+</aside>
+<aside class="sidebar-khuyenmai">
+    <div class="logo">
+        @*<img src="images/logo.jpg" alt="logo">*@
+        <h2>Khuyến mãi</h2>
+    </div>
+    <ul class="links">
+        <li>
+            <span class="material-symbols-outlined"><i class="fas fa-wallet"></i></span>
+            <a href="#">Khuyến mãi</a>
+        </li>
+
+    </ul>
+</aside>
 <section class="container-fluid searchProd">
     <h2>Tìm kiếm sản phẩm</h2>
     @using (Html.BeginForm("Index", "Home", FormMethod.Get))
@@ -113,7 +342,7 @@
             @Html.TextBoxFor(m => m.SearchTerm, new
        {
            @class = "search-input",
-           placeholder = "Nhập tên,, mô tả hoặc chủng loại sả phẩm"
+           placeholder = "Nhập tên, mô tả hoặc chủng loại sả phẩm"
 
        })
             <button type="submit" class="search-button">Tìm kiếm</button>

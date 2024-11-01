@@ -141,6 +141,7 @@
     <Compile Include="Areas\Admin\Controllers\ProductsController.cs" />
     <Compile Include="Controllers\AboutUsController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\CollectionsController.cs" />
     <Compile Include="Controllers\ContactUsController.cs" />
     <Compile Include="Controllers\FAQSController.cs" />
@@ -186,7 +187,11 @@
     <Compile Include="Models\User.cs">
       <DependentUpon>MyStoreModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModel\Cart.cs" />
+    <Compile Include="Models\ViewModel\CartItem.cs" />
+    <Compile Include="Models\ViewModel\CartService.cs" />
     <Compile Include="Models\ViewModel\HomeProductVM.cs" />
+    <Compile Include="Models\ViewModel\ProductDetailsVM.cs" />
     <Compile Include="Models\ViewModel\ProductSearchVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -211,6 +216,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\remove.png" />
     <Content Include="Models\MyStoreModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>MyStoreModel.Context.cs</LastGenOutput>
@@ -261,6 +267,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="videos\Nike ads Motion Graphics.mp4" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -283,6 +290,9 @@
     <Content Include="Views\Home\_PVFeaturedProduct.cshtml" />
     <Content Include="Views\Home\_PVNewProduct.cshtml" />
     <Content Include="Views\Home\ProductDetail.cshtml" />
+    <Content Include="Views\Home\_PVRelatedProduct.cshtml" />
+    <Content Include="Views\Home\_PVTopProduct.cshtml" />
+    <Content Include="Views\Cart\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

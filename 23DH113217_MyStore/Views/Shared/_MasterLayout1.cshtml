@@ -11,13 +11,33 @@
         html {
             font-family: Arial, Helvetica, sans-serif;
         }
-
-
-
-        /*HEADER*/
-        header {
+        body{
+            padding-top:100px;
         }
 
+        
+        /*HEADER*/
+        .logoweb {
+            display: inline-block;
+            
+        }
+        .video {
+            display: inline-block;
+            height: 50px;
+            
+            float: right;
+        }
+            .video video {
+                height: 100px;
+                
+            }
+        header {
+            top:0;
+            width: 100%;
+            position: fixed;
+            z-index: 9999;
+        }
+        
         ul#Menu li {
             display: inline;
         }
@@ -44,11 +64,16 @@
 </head>
 
 <body>
-    <div id="container">
-        <header id="container">
+    
+        <header>
             <div class="logoweb">
-                <img style="width: 100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/2560px-Logo_NIKE.svg.png" />
+                <img style="width: 235px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/2560px-Logo_NIKE.svg.png" />
             </div>
+            <div class="video">
+                <video loop autoplay muted src="~/videos/Nike ads Motion Graphics.mp4">
+                </video>
+            </div>
+            
             <nav>
                 <ul id="Menu">
                     <li><a href="~/Home/Index">HOME</a></li>
@@ -68,6 +93,6 @@
                 @RenderBody()
             </div>
         </section>
-    </div>
+    
 </body>
 </html>

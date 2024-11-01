@@ -32,18 +32,34 @@ namespace _23DH113217_MyStore.Controllers
 
             return View(model);
         }
-        public ActionResult ProductDetail(int? id)
+        public ActionResult ProductDetail(int? id, int? quantity, int? page)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product product = db.Products.Find(id);
-            if (product == null)
+            Product pro = db.Products.Find(id);
+            if (pro == null)
             {
                 return HttpNotFound();
             }
-            return View(product);
+            var products = db.Products.Where(p => p.CategoryID == pro.CategoryID && p.ProductID != pro.ProductID).AsQueryable();
+
+            ProductDetailsVM model = new ProductDetailsVM();
+
+            int pageNumber = page ?? 1;
+            int pageSize = model.PageSize;
+            model.product = pro;
+            model.RelatedProducts = products.OrderBy(p =>p.ProductID).Take(8).ToPagedList(pageNumber, pageSize);
+            model.TopProducts = products.OrderByDescending(p=>p.OrderDetails.Count()).Take(8).ToPagedList(pageNumber, pageSize);
+
+            if(quantity.HasValue)
+            {
+                model.quantity = quantity.Value;
+            }
+
+
+            return View(model);
         }
 
     }
