@@ -30,9 +30,11 @@
     <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="PaymentStatus" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="AddressDelivery" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Customer" Relationship="Self.FK__Order__CustomerI__412EB0B6" FromRole="Order" ToRole="Customer" />
     <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Order__44FF419A" FromRole="Order" ToRole="OrderDetail" />
+    <Property Name="ShippingAddress" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PaymentMethod" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ShippingMethod" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="OrderDetail">
     <Key>
@@ -45,6 +47,7 @@
     <Property Name="UnitPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
     <NavigationProperty Name="Order" Relationship="Self.FK__OrderDeta__Order__44FF419A" FromRole="OrderDetail" ToRole="Order" />
     <NavigationProperty Name="Product" Relationship="Self.FK__OrderDeta__Produ__440B1D61" FromRole="OrderDetail" ToRole="Product" />
+    <Property Name="TotalPrice" Type="Decimal" Precision="29" Scale="2" annotation:StoreGeneratedPattern="Computed" />
   </EntityType>
   <EntityType Name="Product">
     <Key>
@@ -73,7 +76,7 @@
     <Key>
       <PropertyRef Name="Username" />
     </Key>
-    <Property Name="Username" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" annotation:StoreGeneratedPattern="None" />
     <Property Name="Password" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="UserRole" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Customers" Relationship="Self.FK_User_Customer" FromRole="User" ToRole="Customer" />

@@ -16,21 +16,21 @@ namespace _23DH113217_MyStore.Models.ViewModel
             this.session = session;
         } 
 
-            public Cart GetCart()
+        public Cart GetCart()
+        {
+            var cart = (Cart)session["Cart"];
+            if (cart == null)
             {
-                var cart = (Cart)session["Cart"];
-                if (cart == null)
-                {
-                    cart = new Cart();
-                    session["Cart"] = cart;
+                cart = new Cart();
+                session["Cart"] = cart;
                     
-                }
-                return cart;
             }
-            public void ClearCart()
-            {
-                session["Cart"] = null;
-            }
+            return cart;
+        }
+        public void ClearCart()
+        {
+            session["Cart"] = null;
+        }
 
         }
     }

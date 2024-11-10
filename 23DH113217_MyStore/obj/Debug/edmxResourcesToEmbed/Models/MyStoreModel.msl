@@ -24,18 +24,21 @@
     <EntitySetMapping Name="Orders">
       <EntityTypeMapping TypeName="MyStoreModel.Order">
         <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="ShippingMethod" ColumnName="ShippingMethod" />
+          <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+          <ScalarProperty Name="ShippingAddress" ColumnName="ShippingAddress" />
           <ScalarProperty Name="OrderID" ColumnName="OrderID" />
           <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
           <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
           <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
           <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
-          <ScalarProperty Name="AddressDelivery" ColumnName="AddressDelivery" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="OrderDetails">
       <EntityTypeMapping TypeName="MyStoreModel.OrderDetail">
         <MappingFragment StoreEntitySet="OrderDetail">
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="ProductID" ColumnName="ProductID" />
           <ScalarProperty Name="OrderID" ColumnName="OrderID" />

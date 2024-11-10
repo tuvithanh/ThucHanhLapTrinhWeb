@@ -12,14 +12,15 @@
             font-family: Arial, Helvetica, sans-serif;
         }
         body{
-            padding-top:100px;
+            padding-top:70px;
         }
 
         
         /*HEADER*/
         .logoweb {
+           
             display: inline-block;
-            
+            height: 70px;
         }
         .video {
             display: inline-block;
@@ -28,9 +29,14 @@
             float: right;
         }
             .video video {
-                height: 100px;
+                height: 70px;
                 
             }
+        .nav-menu{
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
         header {
             top:0;
             width: 100%;
@@ -38,24 +44,46 @@
             z-index: 9999;
         }
         
-        ul#Menu li {
+        ul.Menu li {
             display: inline;
         }
 
-            ul#Menu li a {
+            ul.Menu li a {
                 margin-left: 20px;
                 color: white;
                 text-decoration: none;
                 font-weight: bold;
             }
 
-        nav ul#Menu {
+        .left-nav{
+            display: inline-block;
+            width: 50%;
+        }
+            .left-nav li a {
+               
+            }
+        .right-nav{
+            display: inline-block;
+            background-color: black;
+            width: 50%;
+            right: 0;
+            text-align: right;
+            height: 58px;
+        }
+            .right-nav li a {
+                
+                
+            }
+                .right-nav ul.Menu{
+                    margin-right: 40px;
+                }
+        .left-nav ul.Menu {
             list-style-type: none;
             background-color: black;
             padding: 20px;
         }
 
-        ul#Menu {
+        ul.Menu {
         }
         /*BANNER*/
 
@@ -64,35 +92,45 @@
 </head>
 
 <body>
-    
-        <header>
-            <div class="logoweb">
-                <img style="width: 235px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/2560px-Logo_NIKE.svg.png" />
-            </div>
-            <div class="video">
-                <video loop autoplay muted src="~/videos/Nike ads Motion Graphics.mp4">
-                </video>
-            </div>
-            
-            <nav>
-                <ul id="Menu">
+    <div class="logoweb">
+        <img style="width: 200px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/2560px-Logo_NIKE.svg.png" />
+    </div>
+    <div class="video">
+        <video loop autoplay muted src="~/videos/Nike ads Motion Graphics.mp4">
+        </video>
+    </div>
+    <header>
+        
+
+        <div class="nav-menu">
+            <div class="left-nav">
+                <ul class="Menu">
                     <li><a href="~/Home/Index">HOME</a></li>
-                    <li><a href="~/Collections/Collections">COLLECTIONS <i class="fa fa-caret-right fa-rotate-90" aria-hidden="true"></i></a></li>
+                    @*<li><a href="~/Collections/Collections">COLLECTIONS <i class="fa fa-caret-right fa-rotate-90" aria-hidden="true"></i></a></li>
                     <li><a href="~/Shop/Shop">SHOP <i class="fa fa-caret-right fa-rotate-90" aria-hidden="true"></i></a></li>
                     <li><a href="~/LookBook/LookBook">LOOKBOOK <i class="fa fa-caret-right fa-rotate-90" aria-hidden="true"></i></a></li>
                     <li><a href="~/Blog/Blog">BLOG <i class="fa fa-caret-right fa-rotate-90" aria-hidden="true"></i></a></li>
                     <li><a href="~/FAQS/FAQS">FAQS</a></li>
-                    <li><a href="~/AboutUs/AboutUs">ABOUT US</a></li>
+                    <li><a href="~/AboutUs/AboutUs">ABOUT US</a></li>*@
                     <li><a href="~/ContactUs/ContactUs">CONTACT US</a></li>
                 </ul>
-            </nav>
-        </header>
-        <section class="banner">
-            <div id="banner"></div>
-            <div>
-                @RenderBody()
             </div>
-        </section>
-    
+            <div class="right-nav">
+                <ul class="Menu">
+                    <li><a href="~/Account/Login">Login</a></li>
+                    <li><a href="~/Account/Register">Register</a></li>
+                    <li><a href="~/Cart/Index"><i class="fas fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </header>
+    <section class="banner">
+        <div id="banner"></div>
+        <div>
+            @RenderBody()
+        </div>
+    </section>
+
 </body>
 </html>

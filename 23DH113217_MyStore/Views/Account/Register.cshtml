@@ -1,0 +1,59 @@
+﻿@model _23DH113217_MyStore.Models.ViewModel.RegisterVM
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_MasterLayout1.cshtml";
+}
+<style>
+    .search-cart{
+        
+    }
+</style>
+@using (Html.BeginForm("Register", "Account", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="search-cart">
+        <h2>Đăng ký tài khoản</h2>
+
+        
+        @Html.LabelFor(m => m.Username)
+        @Html.TextBoxFor(m => m.Username, new { @class = "search-input", placeholder = "Nhập tên đăng nhập" })
+        @Html.ValidationMessageFor(m => m.Username)
+        <br />
+        
+        @Html.LabelFor(m => m.Password)
+        @Html.PasswordFor(m => m.Password, new { @class = "search-input", placeholder = "Nhập mật khẩu" })
+        @Html.ValidationMessageFor(m => m.Password)
+        <br />
+        <!-- Xác nhận mật khẩu -->
+        @Html.LabelFor(m => m.ConfirmPassword)
+        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "search-input", placeholder = "Xác nhận mật khẩu" })
+        @Html.ValidationMessageFor(m => m.ConfirmPassword)
+        <br />
+        <!-- Họ tên -->
+        @Html.LabelFor(m => m.CustomerName)
+        @Html.TextBoxFor(m => m.CustomerName, new { @class = "search-input", placeholder = "Nhập họ tên" })
+        @Html.ValidationMessageFor(m => m.CustomerName)
+        <br />
+        <!-- Số điện thoại -->
+        @Html.LabelFor(m => m.CustomerPhone)
+        @Html.TextBoxFor(m => m.CustomerPhone, new { @class = "search-input", placeholder = "Nhập số điện thoại" })
+        @Html.ValidationMessageFor(m => m.CustomerPhone)
+        <br />
+        <!-- Email -->
+        @Html.LabelFor(m => m.CustomerEmail)
+        @Html.TextBoxFor(m => m.CustomerEmail, new { @class = "search-input", placeholder = "Nhập email" })
+        @Html.ValidationMessageFor(m => m.CustomerEmail)
+        <br />
+        <!-- Địa chỉ -->
+        @Html.LabelFor(m => m.CustomerAddress)
+        @Html.TextBoxFor(m => m.CustomerAddress, new { @class = "search-input", placeholder = "Nhập địa chỉ" })
+        @Html.ValidationMessageFor(m => m.CustomerAddress)
+        <br />
+        <!-- Nút đăng ký -->
+        <button type="submit" class="btn btn-primary">
+            Đăng ký
+        </button>
+    </div>
+}
+
