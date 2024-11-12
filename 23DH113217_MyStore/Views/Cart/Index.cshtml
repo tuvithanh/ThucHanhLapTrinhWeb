@@ -7,6 +7,7 @@
 <style>
     .shoppingcart {
         background-color: ghostwhite;
+        
     }
 
     
@@ -35,10 +36,14 @@
         border-radius: 5px;
         width: 300px;
         text-align: center;
+        margin-bottom: 30px;
+
     }
     .total-price{
         display: inline-block;
         vertical-align: top;
+        width: 15%;
+        padding: 40px;
     }
     .cart-item-info{
         display:inline-block;
@@ -54,6 +59,7 @@
         text-align:center;
         padding: 7px 20px;
         border-radius: 8px;
+        margin-top: 20px;
     }
 </style>
 <script language="JavaScript">
@@ -138,9 +144,9 @@
 
         <div class="total-price col-md-3 cart-section">
             <div><strong>Tổng giá trị: &nbsp;<span style="color: red;">@Model.TotalValue().ToString("N0")</span></strong></div>
-            <div class="mua-hang-btn">@Html.ActionLink("Mua hàng", "Index", "Payment", null, new { @class = "btn btn-danger cart-button" })</div>
+            <div class="mua-hang-btn">@Html.ActionLink("Mua hàng", "Checkout", "Order", null, new { @class = "btn btn-danger cart-button", @style = "color: white; border: none; font-weight: bold; font-size: 20px; text-decoration: none;" })</div>
         </div> 
     }
 </div>
-<div class="continue-to-shop col-md-12"> @Html.ActionLink("Tiếp tục mua hàng", "Index", "Home", null, new { @class = "btn btn-warning cart-button" })</div>
+<div class="continue-to-shop col-md-12"> @Html.ActionLink("Tiếp tục mua hàng", "Index", "Home", null, new { @class = "btn btn-warning cart-button", @style = "color : white; text-decoration: none; border: none; font-weight: bold; font-size: 20px;" })</div>
 

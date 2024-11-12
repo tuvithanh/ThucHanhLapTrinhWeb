@@ -4,56 +4,93 @@
     Layout = "~/Views/Shared/_MasterLayout1.cshtml";
 }
 <style>
-    .search-cart{
+    .register-form{
+        width: 50%;
+        margin: auto;
+        background-color: whitesmoke;
+        padding: 30px;
+        border: solid red 3px;
+
+    }
+    .form-group{
+        margin-bottom: 30px;
+        text-align: left;
         
     }
+    .btn{
+        text-align:center;
+        padding: 7px 18px;
+        border: solid black 3px;
+        color: white;
+        background-color: red;
+        font-weight: bold;
+        font-size: 20px;
+    }
 </style>
+<h2 style="text-align: center;">Đăng ký tài khoản</h2>
 @using (Html.BeginForm("Register", "Account", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
 
-    <div class="search-cart">
-        <h2>Đăng ký tài khoản</h2>
+    <div class="register-form">
+        
+        <div style="width: 60%; ">
+        <div class="form-group">
+            @Html.LabelFor(m => m.Username)
+                @Html.TextBoxFor(m => m.Username, new { @class = "search-input", placeholder = "Nhập tên đăng nhập" })
+                @Html.ValidationMessageFor(m => m.Username)
+            </div>
+        
+        
+        <br />              
+        <div class="form-group">
+            @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password, new { @class = "search-input", placeholder = "Nhập mật khẩu" })
+                @Html.ValidationMessageFor(m => m.Password)
+            </div>
 
-        
-        @Html.LabelFor(m => m.Username)
-        @Html.TextBoxFor(m => m.Username, new { @class = "search-input", placeholder = "Nhập tên đăng nhập" })
-        @Html.ValidationMessageFor(m => m.Username)
         <br />
-        
-        @Html.LabelFor(m => m.Password)
-        @Html.PasswordFor(m => m.Password, new { @class = "search-input", placeholder = "Nhập mật khẩu" })
-        @Html.ValidationMessageFor(m => m.Password)
+        <div class="form-group">
+            @Html.LabelFor(m => m.ConfirmPassword)
+                @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "search-input", placeholder = "Xác nhận mật khẩu" })
+                @Html.ValidationMessageFor(m => m.ConfirmPassword)
+            </div>
+       
         <br />
-        <!-- Xác nhận mật khẩu -->
-        @Html.LabelFor(m => m.ConfirmPassword)
-        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "search-input", placeholder = "Xác nhận mật khẩu" })
-        @Html.ValidationMessageFor(m => m.ConfirmPassword)
-        <br />
+        <div class="form-group">
+            @Html.LabelFor(m => m.CustomerName)
+                @Html.TextBoxFor(m => m.CustomerName, new { @class = "search-input", placeholder = "Nhập họ tên" })
+                @Html.ValidationMessageFor(m => m.CustomerName)
+            </div>
         <!-- Họ tên -->
-        @Html.LabelFor(m => m.CustomerName)
-        @Html.TextBoxFor(m => m.CustomerName, new { @class = "search-input", placeholder = "Nhập họ tên" })
-        @Html.ValidationMessageFor(m => m.CustomerName)
         <br />
+        <div class="form-group">
+            @Html.LabelFor(m => m.CustomerPhone)
+                @Html.TextBoxFor(m => m.CustomerPhone, new { @class = "search-input", placeholder = "Nhập số điện thoại" })
+                @Html.ValidationMessageFor(m => m.CustomerPhone)
+            </div>
+        
         <!-- Số điện thoại -->
-        @Html.LabelFor(m => m.CustomerPhone)
-        @Html.TextBoxFor(m => m.CustomerPhone, new { @class = "search-input", placeholder = "Nhập số điện thoại" })
-        @Html.ValidationMessageFor(m => m.CustomerPhone)
         <br />
+        <div class="form-group">
+            @Html.LabelFor(m => m.CustomerEmail)
+            @Html.TextBoxFor(m => m.CustomerEmail, new { @class = "search-input", placeholder = "Nhập email" })
+            @Html.ValidationMessageFor(m => m.CustomerEmail)
+        </div>
         <!-- Email -->
-        @Html.LabelFor(m => m.CustomerEmail)
-        @Html.TextBoxFor(m => m.CustomerEmail, new { @class = "search-input", placeholder = "Nhập email" })
-        @Html.ValidationMessageFor(m => m.CustomerEmail)
         <br />
+        <div class="form-group">
+            @Html.LabelFor(m => m.CustomerAddress)
+                @Html.TextBoxFor(m => m.CustomerAddress, new { @class = "search-input", placeholder = "Nhập địa chỉ" })
+                @Html.ValidationMessageFor(m => m.CustomerAddress)
+            </div>
         <!-- Địa chỉ -->
-        @Html.LabelFor(m => m.CustomerAddress)
-        @Html.TextBoxFor(m => m.CustomerAddress, new { @class = "search-input", placeholder = "Nhập địa chỉ" })
-        @Html.ValidationMessageFor(m => m.CustomerAddress)
         <br />
         <!-- Nút đăng ký -->
         <button type="submit" class="btn btn-primary">
             Đăng ký
         </button>
+            </div>
     </div>
 }
 

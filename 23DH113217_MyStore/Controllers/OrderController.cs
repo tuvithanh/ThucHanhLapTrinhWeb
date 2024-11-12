@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.Ajax.Utilities;
 
 namespace _23DH113217_MyStore.Controllers
 {
@@ -16,25 +17,42 @@ namespace _23DH113217_MyStore.Controllers
             return View();
         }
         // GET: Order/Checkout
-        [Authorize]
+        
+        
         public ActionResult Checkout()
         {
             //Kiểm tra giỏ hàng trong session,
             //nếu giỏ hàng rỗng hoặc không có sản phẩm thì chuyển hướng về trang chủ
-            var cart = Session["Cart"] as List<CartItem>;
-            if (cart == null || !cart.Any())
+            var cart = Session["Cart"] as Cart;
+            if (cart == null || !cart.Items.Any())
             {
                 return RedirectToAction("Index", "Home");
             }
-            var user = db.Users.SingleOrDefault(u => u.Username == User.Identity.Name);
-            if (user == null) { return RedirectToAction("Login", "Account"); }
-            //Lấy thông tin khách hàng từ CSDL, nếu chưa có thì chuyển hướng tới trang Đăng nhập //nếu có rồi thì lấy địa chỉ của khách hàng và gán vào ShippingAddress của CheckoutVm
-            var customer = db.Customers.SingleOrDefault(c => c.Username == user.Username);
-            if (customer == null) { return RedirectToAction("Login", "Account"); }
-            var model = new CheckoutVM
+            var username = Session["Username"] as string;
+            if (string.IsNullOrEmpty(username))
             {
-                CartItems = cart,
-                TotalAmount = cart.Sum(item => item.TotalPrice),
+                // Nếu không có username trong session, chuyển hướng người dùng tới trang đăng nhập
+                return RedirectToAction("Login", "Account");
+            }
+
+
+            // Lấy tên người dùng từ User.Identity
+            var user = db.Users.SingleOrDefault(u => u.Username == username);
+            if (user == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            // Tìm khách hàng trong bảng Customers dựa vào CustomerID
+            var customer = db.Customers.SingleOrDefault(c => c.Username == username);
+            if (customer == null)
+            {
+                return RedirectToAction("Register", "Account"); // Hoặc xử lý lỗi khác​14:04/-strong/-heart:>:o:-((:-h Xem trước khi gửiThả Files vào đây để xem lại trước khi gửi
+            }
+                var model = new CheckoutVM
+            {
+                CartItems = cart.Items.ToList(),
+                TotalAmount = cart.Items.Sum(item => item.TotalPrice),
                 OrderDate = DateTime.Now,
                 ShippingAddress = customer.CustomerAddress,
                 CustomerID = customer.CustomerID,
@@ -46,19 +64,37 @@ namespace _23DH113217_MyStore.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize]
+        
         public ActionResult Checkout(CheckoutVM model)
         {
             if (ModelState.IsValid)
             {
-                var cart = Session["Cart"] as List<CartItem>;
-                //Nếu giỏ hàng rỗng sẽ điều hướng tới trang Home
-                if (cart == null || !cart.Any()) { return RedirectToAction("Index", "Home"); } //Nếu người dùng chưa đăng nhập sẽ điều hướng tới trang Login
-                var user = db.Users.SingleOrDefault(u => u.Username == User.Identity.Name);
-                if (user == null) { return RedirectToAction("Login", "Account"); }
-                //nếu khách hàng không khớp với tên tên đăng nhập, sẽ điều hướng tới trang Login
-                var customer = db.Customers.SingleOrDefault(c => c.Username == user.Username);
-                if (customer == null) { return RedirectToAction("Login", "Account"); }
+                var cart = Session["Cart"] as Cart;
+                if (cart == null || !cart.Items.Any())
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+                var username = Session["Username"] as string;
+                if (string.IsNullOrEmpty(username))
+                {
+                    // Nếu không có username trong session, chuyển hướng người dùng tới trang đăng nhập
+                    return RedirectToAction("Login", "Account");
+                }
+
+
+                // Lấy tên người dùng từ User.Identity
+                var user = db.Users.SingleOrDefault(u => u.Username == username);
+                if (user == null)
+                {
+                    return RedirectToAction("Login", "Account");
+                }
+
+                // Tìm khách hàng trong bảng Customers dựa vào CustomerID
+                var customer = db.Customers.SingleOrDefault(c => c.Username == username);
+                if (customer == null)
+                {
+                    return RedirectToAction("Register", "Account"); // Hoặc xử lý lỗi khác​14:04/-strong/-heart:>:o:-((:-h Xem trước khi gửiThả Files vào đây để xem lại trước khi gửi
+                }
                 //Nếu người dùng chọn thanh toán bằng Paypal, sẽ điều hướng tới trang PaymentWithPaypal
                 if (model.PaymentMethod == "Paypal")
                 {
@@ -88,7 +124,7 @@ namespace _23DH113217_MyStore.Controllers
                     PaymentMethod = model.PaymentMethod,
                     ShippingMethod = model.ShippingMethod,
                     ShippingAddress = model.ShippingAddress,
-                    OrderDetails = cart.Select(item => new OrderDetail
+                    OrderDetails = cart.Items.Select(item => new OrderDetail
                     {
                         ProductID = item.ProductID,
                         Quantity = item.Quantity,

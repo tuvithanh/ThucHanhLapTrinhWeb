@@ -48,6 +48,13 @@ namespace _23DH113217_MyStore.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "CategoryID,CategoryName")] Category category)
         {
+            var existingCategory = db.Categories.FirstOrDefault(c => c.CategoryName == category.CategoryName);
+            if (existingCategory != null)
+            {
+                // Nếu danh mục đã tồn tại, thêm lỗi vào ModelState để hiển thị trong view
+                ModelState.AddModelError("CategoryName", "Danh mục này đã tồn tại.");
+                return View(category);
+            }
             if (ModelState.IsValid)
             {
                 db.Categories.Add(category);
@@ -57,6 +64,7 @@ namespace _23DH113217_MyStore.Areas.Admin.Controllers
 
             return View(category);
         }
+        
 
         // GET: Admin/Categories/Edit/5
         public ActionResult Edit(int? id)
@@ -104,18 +112,38 @@ namespace _23DH113217_MyStore.Areas.Admin.Controllers
             return View(category);
         }
 
-        // POST: Admin/Categories/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Category category = db.Categories.Find(id);
+            // Tìm danh mục cùng với các sản phẩm liên quan
+            Category category = db.Categories.Include(c => c.Products).SingleOrDefault(c => c.CategoryID == id);
+
+            if (category == null)
+            {
+                return HttpNotFound();
+            }
+
+            // Nếu danh mục có sản phẩm, xóa tất cả sản phẩm trước
+            if (category.Products.Any())
+            {
+                db.Products.RemoveRange(category.Products);
+            }
+
+            // Xóa danh mục sau khi đã xóa các sản phẩm liên quan
             db.Categories.Remove(category);
             db.SaveChanges();
+
             return RedirectToAction("Index");
         }
 
-        protected override void Dispose(bool disposing)
+    
+
+// POST: Admin/Categories/Delete/5
+
+
+
+protected override void Dispose(bool disposing)
         {
             if (disposing)
             {

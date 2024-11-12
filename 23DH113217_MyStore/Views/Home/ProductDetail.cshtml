@@ -7,8 +7,8 @@
 
 <style>
     /*detailsproduct*/
+
     .product-img{
-        
         vertical-align: top;
         width: 15%;
         display: inline-block;
@@ -22,9 +22,11 @@
     /*relatedproduct*/
     .product-info-and-relatedproduct {
         display: inline-block;
-        margin-left: 50px;
+        margin-left: 20px;
         width: 50%;
         vertical-align: top;
+        background-color: whitesmoke;
+        padding: 20px;
         
     }
     dt{
@@ -36,6 +38,13 @@
         margin-left: 50px;
         width: 20%;
         text-align: center;
+        vertical-align: top;
+        background-color: whitesmoke;
+    }
+    .form-group{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 </style>
 
@@ -97,15 +106,15 @@
                 </p>
 
                 <h4><strong>Tạm tính</strong> </h4>
-                <p>@Model.estimatedValue.ToString("NO")</p>
-                <p>
+                <p>@Model.estimatedValue.ToString("N0")</p>
+                <p style="background-color: red; width: 200px; padding: 7px 18px; border: solid 3px black; border-radius: 7px;">
                     @Html.ActionLink("Thêm vào giỏ hàng", "AddToCart", "Cart",
                                         new { id = Model.product.ProductID, quantity = Model.quantity },
-                                        new { @class = "btn btn-info" })
+                                        new { @class = "btn btn-info" , @style = "color: white; text-decoration: none;"})
                 </p>
 
             }
-            <hr style="width:50"/>
+           
         </div>
         @Html.Partial("_PVTopProduct", Model)
     </div>

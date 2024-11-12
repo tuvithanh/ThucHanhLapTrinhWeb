@@ -3,6 +3,7 @@ using _23DH113217_MyStore.Models.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Runtime.Remoting.Messaging;
 using System.Web;
 using System.Web.Mvc;
@@ -15,6 +16,19 @@ namespace _23DH113217_MyStore.Controllers
     {
         private MyStoreEntities db = new MyStoreEntities();
         // GET: Account/Register
+        public ActionResult ProfileInfo(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            User user = db.Users.Find(id);
+            if (user == null)
+            {
+                return HttpNotFound();
+            }
+            return View(user);
+        }
         public ActionResult Register()
         {
             return View();

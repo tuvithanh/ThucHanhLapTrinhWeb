@@ -19,7 +19,8 @@
         text-align: center;
     }
 
-    .feature-container {
+    .new-products-img{
+        text-align: center;
     }
 
     .lproduct-item p {
@@ -49,7 +50,7 @@
         @foreach (var product in Model.NewProducts)
         {
         <li class="lproduct-item">
-            <div>
+            <div class="new-products-img">
                 <a href="@Url.Action("ProductDetail", "Home", new { id = product.ProductID })">
                     <img src="@Html.DisplayFor(modelItem => product.ProductImage)" />
                 </a>

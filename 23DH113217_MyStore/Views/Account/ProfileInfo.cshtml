@@ -1,0 +1,21 @@
+﻿@model _23DH113217_MyStore.Models.User
+@{
+    ViewBag.Title = "ProfileInfo";
+    Layout = "~/Views/Shared/_MasterLayout1.cshtml";
+}
+
+<h2>Thông tin người dùng</h2>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên người dùng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+
+    </dl>
+</div>

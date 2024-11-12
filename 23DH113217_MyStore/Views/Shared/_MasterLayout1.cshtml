@@ -67,7 +67,7 @@
             background-color: black;
             width: 50%;
             right: 0;
-            text-align: right;
+            text-align:left;
             height: 58px;
         }
             .right-nav li a {
@@ -86,8 +86,118 @@
         ul.Menu {
         }
         /*BANNER*/
+        /*footer*/
+        /* Global Footer Styles */
+        .nike-footer {
+            background-color: #111;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            padding: 50px 0;
+            text-align: center;
+        }
 
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
+        .footer-logo img {
+            width: 120px;
+            height: auto;
+        }
+
+        .footer-links ul,
+        .footer-social ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li,
+        .footer-social li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a,
+        .footer-social a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+            .footer-links a:hover,
+            .footer-social a:hover {
+                color: #ff6600; /* Nike orange */
+            }
+
+        /* Social Media Icons */
+        .footer-social .social-icon {
+            display: inline-block;
+            margin: 0 10px;
+            width: 30px;
+            height: 30px;
+        }
+
+        .footer-social img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+            .footer-social img:hover {
+                transform: scale(1.1);
+            }
+
+        /* Copyright Section */
+        .footer-bottom {
+            margin-top: 30px;
+            font-size: 12px;
+            text-align: center;
+            color: #777;
+        }
+
+            .footer-bottom p {
+                margin: 0;
+                /*            }*/
+            }
+                #login-options
+
+        {
+            display: none;
+            position: absolute;
+            top: 120%; /* Hiển thị bảng dưới tài khoản */
+            margin-top: -40px;
+            background-color: white;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            min-width: 160px;
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .right-nav:hover #login-options {
+            display: block; /* Hiển thị bảng khi trỏ chuột vào phần "Tài khoản" */
+        }
+
+        .options-item {
+            padding: 8px 20px;
+        }
+
+            .options-item a {
+                color: black;
+                text-decoration: none;
+                display: block;
+            }
+
+                .options-item a:hover {
+                    background-color: #f4f5f6;
+                    color: #000;
+                }
+                
     </style>
 </head>
 
@@ -100,26 +210,56 @@
         </video>
     </div>
     <header>
-        
+
 
         <div class="nav-menu">
             <div class="left-nav">
                 <ul class="Menu">
                     <li><a href="~/Home/Index">HOME</a></li>
                     @*<li><a href="~/Collections/Collections">COLLECTIONS <i class="fa fa-caret-right fa-rotate-90" aria-hidden="true"></i></a></li>
-                    <li><a href="~/Shop/Shop">SHOP <i class="fa fa-caret-right fa-rotate-90" aria-hidden="true"></i></a></li>
-                    <li><a href="~/LookBook/LookBook">LOOKBOOK <i class="fa fa-caret-right fa-rotate-90" aria-hidden="true"></i></a></li>
-                    <li><a href="~/Blog/Blog">BLOG <i class="fa fa-caret-right fa-rotate-90" aria-hidden="true"></i></a></li>
-                    <li><a href="~/FAQS/FAQS">FAQS</a></li>
-                    <li><a href="~/AboutUs/AboutUs">ABOUT US</a></li>*@
+                        <li><a href="~/Shop/Shop">SHOP <i class="fa fa-caret-right fa-rotate-90" aria-hidden="true"></i></a></li>
+                        <li><a href="~/LookBook/LookBook">LOOKBOOK <i class="fa fa-caret-right fa-rotate-90" aria-hidden="true"></i></a></li>
+                        <li><a href="~/Blog/Blog">BLOG <i class="fa fa-caret-right fa-rotate-90" aria-hidden="true"></i></a></li>
+                        <li><a href="~/FAQS/FAQS">FAQS</a></li>
+                        <li><a href="~/AboutUs/AboutUs">ABOUT US</a></li>*@
                     <li><a href="~/ContactUs/ContactUs">CONTACT US</a></li>
                 </ul>
             </div>
             <div class="right-nav">
                 <ul class="Menu">
-                    <li><a href="~/Account/Login">Login</a></li>
-                    <li><a href="~/Account/Register">Register</a></li>
+                    @if (Session["Username"] != null)
+                    {
+                        @* Nếu người dùng đã đăng nhập *@
+                        <span style="color: white;">Hello, @Session["Username"]</span>
+                        <div id="login-options" class="options">
+                            <div class="options-item">
+                                <a href="@Url.Action("ProfileInfo", "Account")">Thông tin tài khoản</a>
+                            </div>
+                            <div class="options-item">
+                                <a href="@Url.Action("MyOrder", "Order")">Lịch sử mua hàng</a>
+                            </div>
+                            <div class="options-item">
+                                <a href="@Url.Action("Logout", "Account")">Đăng xuất</a>  <!-- Hiển thị đăng xuất khi đã đăng nhập -->
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        @* Nếu người dùng chưa đăng nhập *@
+
+                        <span style="color: white; font-weight: bold; font-size: 19px;">Tài khoản</span>
+                        <div id="login-options" class="options">
+                            <div class="options-item">
+                                <a href="@Url.Action("Login", "Account")">Đăng nhập</a>
+                            </div>
+                            <div class="options-item">
+                                <a href="@Url.Action("Register", "Account")">Đăng ký</a>
+                            </div>
+                        </div>
+                    }
+
                     <li><a href="~/Cart/Index"><i class="fas fa-shopping-cart"></i></a></li>
+
                 </ul>
             </div>
 
@@ -131,6 +271,40 @@
             @RenderBody()
         </div>
     </section>
+    <footer class="nike-footer">
+        <div class="footer-container">
+            <!-- Logo Section -->
+            <div class="footer-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/2560px-Logo_NIKE.svg.png" alt="Nike Logo">
+            </div>
 
+            <!-- Navigation Links -->
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">About Nike</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Privacy & Terms</a></li>
+                    <li><a href="#">Nike Apps</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="footer-social">
+                <ul>
+                    @*<li><a href="#" class="social-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Facebook_icon.svg/1200px-Facebook_icon.svg.png" alt="Facebook"></a></li>
+                    <li><a href="#" class="social-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Instagram_logo_2022.svg/2048px-Instagram_logo_2022.svg.png" alt="Instagram"></a></li>
+                    <li><a href="#" class="social-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Twitter_Logo_2021.svg/2048px-Twitter_Logo_2021.svg.png" alt="Twitter"></a></li>
+                    <li><a href="#" class="social-icon"><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Pinterest_logo.svg" alt="Pinterest"></a></li>*@
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Nike, Inc. All rights reserved.(Từ Vĩ Thành)</p>
+        </div>
+    </footer>
 </body>
 </html>
